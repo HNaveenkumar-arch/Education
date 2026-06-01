@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduSmart - Online Education Platform</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="preloader">
+        <div class="loader-content">
+            <i class="fas fa-graduation-cap loader-icon"></i>
+            <h2>Stackly Education</h2>
+            <div class="spinner"></div>
+        </div>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+
+            <div class="nav-logo">
+                <i class="fas fa-book-open logo-icon" style="font-size: 28px;"></i>
+                <span class="logo-text">EduSmart</span>
+            </div>
+
+            <ul class="nav-menu">
+                <li><a href="index.html" class="menu-link active" data-page="Home"><i class="fas fa-home"></i> Home</a>
+                </li>
+                <li><a href="#" class="menu-link" data-page="About"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="#" class="menu-link" data-page="Course"><i class="fas fa-laptop-code"></i> Course</a></li>
+                <li><a href="#" class="menu-link" data-page="Blog"><i class="fas fa-newspaper"></i> Blog</a></li>
+                <li><a href="#" class="menu-link" data-page="Contact"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button class="btn-login" onclick="window.location.href='login.html'">Login</button>
+                <button class="btn-get-started" onclick="window.location.href='createaccount.html'">Get Started</button>
+            </div>
+
+            <button class="hamburger" id="hamburger-btn" aria-label="Toggle Menu">
+                <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+            </button>
+        </div>
+
+        <div class="mobile-dropdown" id="mobile-menu">
+            <ul class="mobile-nav-links">
+                <li><a href="index.html" class="mobile-link active" data-page="Home"><i class="fas fa-home"></i>
+                        Home</a></li>
+                <li><a href="#" class="mobile-link" data-page="About"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="#" class="mobile-link" data-page="Course"><i class="fas fa-laptop-code"></i> Course</a>
+                </li>
+                <li><a href="#" class="mobile-link" data-page="Blog"><i class="fas fa-newspaper"></i> Blog</a></li>
+                <li><a href="#" class="mobile-link" data-page="Contact"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
+            <div class="mobile-btn-wrapper">
+                <button class="btn-login mobile-login-btn" onclick="window.location.href='login.html'">Login</button>
+                <button class="btn-get-started mobile-get-btn" onclick="window.location.href='createaccount.html'">Get
+                    Started</button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+
+        <video autoplay muted loop playsinline class="hero-video">
+            <source src="./asset/video1.mp4">
+        </video>
+
+        <div class="hero-overlay"></div>
+
+        <div class="hero-container">
+
+            <div class="hero-content">
+                <div class="hero-badge" data-aos="fade-right">
+                    🎓 Future-Ready Learning Platform
+                </div>
+
+                <h1 id="heroTitle" data-aos="fade-right" data-aos-duration="1200">
+                    Learn Without Limits
+                </h1>
+
+                <p id="heroText" data-aos="fade-up" data-aos-delay="200">
+                    Unlock your potential with expert-led courses, interactive lessons, and a learning experience
+                    designed for future success.
+                </p>
+
+                <div class="hero-buttons" data-aos="zoom-in" data-aos-delay="400">
+                    <a href="#" class="btn-primary">Get Started</a>
+                    <a href="#" class="btn-secondary">Explore Courses</a>
+                </div>
+
+                <div class="hero-stats">
+                    <div class="stat-card" data-aos="zoom-in-up" data-aos-delay="600">
+                        <h3>50K+</h3>
+                        <span>Students Enrolled</span>
+                    </div>
+
+                    <div class="stat-card" data-aos="zoom-in-up" data-aos-delay="800">
+                        <h3>300+</h3>
+                        <span>Premium Courses</span>
+                    </div>
+
+                    <div class="stat-card" data-aos="zoom-in-up" data-aos-delay="1000">
+                        <h3>98%</h3>
+                        <span>Success Rate</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-right" data-aos="fade-left" data-aos-duration="1400">
+                <div class="hero-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=600&auto=format&fit=crop"
+                        class="hero-image active" alt="Students Learning">
+
+                    <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=600&auto=format&fit=crop"
+                        class="hero-image" alt="Online Education">
+
+                    <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=600&auto=format&fit=crop"
+                        class="hero-image" alt="Education Success">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="why-trust">
+
+        <div class="container">
+
+            <div class="trust-image" data-aos="fade-right" data-aos-duration="1200">
+
+                <img src="./asset/sec1.webp" alt="Teacher Guiding Students">
+
+                <div class="floating-badge">
+                    <i class="fas fa-award"></i>
+                    <span>Trusted by 50K+ Students</span>
+                </div>
+
+            </div>
+
+            <div class="trust-content">
+
+                <span class="section-badge" data-aos="fade-up">
+                    Why Choose EduMaster
+                </span>
+
+                <h2 data-aos="fade-up" data-aos-delay="200">
+                    Why Students Trust EduMaster
+                </h2>
+
+                <p data-aos="fade-up" data-aos-delay="400">
+                    We provide quality education, experienced instructors,
+                    flexible learning, and career-focused programs to help
+                    students achieve their goals and build a successful future.
+                </p>
+
+                <div class="feature-grid">
+
+                    <div class="feature-card" data-aos="zoom-in" data-aos-delay="100">
+                        <i class="fas fa-book-open"></i>
+                        <h3>Quality Education</h3>
+                        <p>
+                            Learn through structured courses designed by academic experts.
+                        </p>
+                    </div>
+
+                    <div class="feature-card" data-aos="zoom-in" data-aos-delay="200">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                        <h3>Expert Instructors</h3>
+                        <p>
+                            Get guidance from experienced educators and mentors.
+                        </p>
+                    </div>
+
+                    <div class="feature-card" data-aos="zoom-in" data-aos-delay="300">
+                        <i class="fas fa-clock"></i>
+                        <h3>Flexible Learning</h3>
+                        <p>
+                            Study anytime and anywhere at your own pace.
+                        </p>
+                    </div>
+
+                    <div class="feature-card" data-aos="zoom-in" data-aos-delay="400">
+                        <i class="fas fa-briefcase"></i>
+                        <h3>Career Focused</h3>
+                        <p>
+                            Build practical skills and prepare for future opportunities.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="courses">
+
+        <div class="section-header">
+
+            <span class="section-badge" data-aos="fade-up">
+                Popular Courses
+            </span>
+
+            <h2 data-aos="fade-up" data-aos-delay="200">
+                Explore Popular Courses
+            </h2>
+
+            <p data-aos="fade-up" data-aos-delay="400">
+                Discover industry-relevant courses designed to build practical skills and prepare students for academic
+                and professional success.
+            </p>
+
+        </div>
+
+        <div class="courses-grid">
+
+            <div class="course-card" data-aos="zoom-in">
+
+                <div class="course-image">
+                    <img src="./asset/sec2.webp" alt="Web Development Course Students Learning Programming and Coding">
+                </div>
+
+                <div class="course-content">
+
+                    <span class="course-tag">Development</span>
+
+                    <h3>Web Development</h3>
+
+                    <p>
+                        Learn HTML, CSS, JavaScript, React and modern frameworks.
+                    </p>
+
+                    <div class="progress">
+                        <span style="width:85%"></span>
+                    </div>
+
+                    <div class="course-info">
+                        <span>👨‍🎓 5.2K Students</span>
+                        <span>⏱️ 12 Weeks</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="course-card" data-aos="zoom-in" data-aos-delay="200">
+
+                <div class="course-image">
+                    <img src="./asset/sec3.webp"
+                        alt="Data Science Course Students Learning Analytics and Machine Learning">
+                </div>
+
+                <div class="course-content">
+
+                    <span class="course-tag">Data Science</span>
+
+                    <h3>Data Analytics</h3>
+
+                    <p>
+                        Master analytics, visualization and machine learning.
+                    </p>
+
+                    <div class="progress">
+                        <span style="width:90%"></span>
+                    </div>
+
+                    <div class="course-info">
+                        <span>👨‍🎓 4.8K Students</span>
+                        <span>⏱️ 10 Weeks</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="course-card" data-aos="zoom-in" data-aos-delay="400">
+
+                <div class="course-image">
+                    <img src="./asset/sec4.webp"
+                        alt="UI UX Design Course Students Creating User Interface and Experience Designs">
+                </div>
+
+                <div class="course-content">
+
+                    <span class="course-tag">Design</span>
+
+                    <h3>UI/UX Design</h3>
+
+                    <p>
+                        Design modern interfaces and seamless user experiences.
+                    </p>
+
+                    <div class="progress">
+                        <span style="width:80%"></span>
+                    </div>
+
+                    <div class="course-info">
+                        <span>👨‍🎓 3.9K Students</span>
+                        <span>⏱️ 8 Weeks</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="course-card" data-aos="zoom-in" data-aos-delay="600">
+
+                <div class="course-image">
+                    <img src="./asset/sec5.webp"
+                        alt="Cloud Computing Course Students Learning AWS Azure and Cloud Technology">
+                </div>
+
+                <div class="course-content">
+
+                    <span class="course-tag">Cloud</span>
+
+                    <h3>Cloud Computing</h3>
+
+                    <p>
+                        Learn AWS, Azure and modern cloud infrastructure.
+                    </p>
+
+                    <div class="progress">
+                        <span style="width:95%"></span>
+                    </div>
+
+                    <div class="course-info">
+                        <span>👨‍🎓 6.1K Students</span>
+                        <span>⏱️ 14 Weeks</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="learning-experience">
+
+        <div class="learning-container">
+
+            <div class="learning-image" data-aos="fade-right" data-aos-duration="1200">
+
+                <img src="./asset/sec6.webp" alt="Student Using Tablet and Digital Learning Tools">
+
+                <div class="floating-card card-one">
+                    <i class="fas fa-video"></i>
+                    <span>Live Classes</span>
+                </div>
+
+                <div class="floating-card card-two">
+                    <i class="fas fa-clipboard-check"></i>
+                    <span>Smart Quizzes</span>
+                </div>
+
+                <div class="floating-card card-three">
+                    <i class="fas fa-award"></i>
+                    <span>Certificates</span>
+                </div>
+
+            </div>
+
+            <div class="learning-content">
+
+                <span class="section-badge" data-aos="fade-up">
+                    Learning Experience
+                </span>
+
+                <h2 data-aos="fade-up" data-aos-delay="200">
+                    Interactive Learning Experience
+                </h2>
+
+                <p data-aos="fade-up" data-aos-delay="400">
+                    Experience engaging lessons, live classes, assignments,
+                    quizzes, and collaborative learning opportunities designed
+                    to improve understanding and student success.
+                </p>
+
+                <div class="learning-features">
+
+                    <div class="learning-box" data-aos="fade-up" data-aos-delay="100">
+
+                        <i class="fas fa-video"></i>
+
+                        <div>
+                            <h3>Live Classes</h3>
+                            <p>
+                                Join real-time classes and interact directly
+                                with experienced instructors.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="learning-box" data-aos="fade-up" data-aos-delay="300">
+
+                        <i class="fas fa-file-alt"></i>
+
+                        <div>
+                            <h3>Assignments</h3>
+                            <p>
+                                Complete practical assignments and improve
+                                your understanding of concepts.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="learning-box" data-aos="fade-up" data-aos-delay="500">
+
+                        <i class="fas fa-users"></i>
+
+                        <div>
+                            <h3>Collaborative Learning</h3>
+                            <p>
+                                Learn together through discussions,
+                                teamwork, and group activities.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="learning-box" data-aos="fade-up" data-aos-delay="700">
+
+                        <i class="fas fa-chart-line"></i>
+
+                        <div>
+                            <h3>Progress Tracking</h3>
+                            <p>
+                                Monitor your learning journey with detailed
+                                performance insights and reports.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="teachers-section">
+        <div class="teachers-container">
+
+            <div class="section-header fade-up">
+                <span class="section-tag"><i class="fas fa-chalkboard-teacher"></i> Expert Mentors</span>
+                <h2 class="section-title">Learn from the Best</h2>
+            </div>
+
+            <div class="teachers-grid">
+
+                <div class="flip-card fade-up">
+                    <div class="flip-inner">
+                        <div class="flip-front">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=600&auto=format&fit=crop"
+                                alt="Teacher">
+                        </div>
+                        <div class="flip-back">
+                            <h3>Dr. Sarah Johnson</h3>
+                            <span class="teacher-role">Mathematics Expert</span>
+                            <p>10+ years of experience in making advanced mathematics easy to understand.</p>
+                            <div class="social">
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card fade-up" style="transition-delay: 0.1s;">
+                    <div class="flip-inner">
+                        <div class="flip-front">
+                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=600&auto=format&fit=crop"
+                                alt="Teacher">
+                        </div>
+                        <div class="flip-back">
+                            <h3>Prof. Michael Lee</h3>
+                            <span class="teacher-role">Science Instructor</span>
+                            <p>Focused on practical science, research, and innovation-based learning.</p>
+                            <div class="social">
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card fade-up" style="transition-delay: 0.2s;">
+                    <div class="flip-inner">
+                        <div class="flip-front">
+                            <img src="./asset/sec5.webp" alt="Teacher">
+                        </div>
+                        <div class="flip-back">
+                            <h3>Emily Roberts</h3>
+                            <span class="teacher-role">Technology Mentor</span>
+                            <p>Expert in coding, AI, and building modern digital learning systems.</p>
+                            <div class="social">
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#"><i class="fab fa-github"></i></a>
+                                <a href="#"><i class="fas fa-globe"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card fade-up">
+                    <div class="flip-inner">
+                        <div class="flip-front">
+                            <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=600&auto=format&fit=crop"
+                                alt="Teacher">
+                        </div>
+                        <div class="flip-back">
+                            <h3>David Wilson</h3>
+                            <span class="teacher-role">Business Coach</span>
+                            <p>Guiding students in career growth, leadership, and core business skills.</p>
+                            <div class="social">
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card fade-up" style="transition-delay: 0.1s;">
+                    <div class="flip-inner">
+                        <div class="flip-front">
+                            <img src="https://images.unsplash.com/photo-1544717302-de2939b7ef71?q=80&w=600&auto=format&fit=crop"
+                                alt="Teacher">
+                        </div>
+                        <div class="flip-back">
+                            <h3>Anna Smith</h3>
+                            <span class="teacher-role">English Trainer</span>
+                            <p>Improving communication, soft skills, and professional language fluency.</p>
+                            <div class="social">
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#"><i class="fab fa-youtube"></i></a>
+                                <a href="#"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card fade-up" style="transition-delay: 0.2s;">
+                    <div class="flip-inner">
+                        <div class="flip-front">
+                            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=600&auto=format&fit=crop"
+                                alt="Teacher">
+                        </div>
+                        <div class="flip-back">
+                            <h3>John Carter</h3>
+                            <span class="teacher-role">Physics Expert</span>
+                            <p>Making complex physics theories easy with practical real-world examples.</p>
+                            <div class="social">
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <section class="testimonials-3d-section" id="success-stories">
+        <div class="testimonials-container">
+
+            <div class="section-header fade-up">
+                <span class="section-tag-gold"><i class="fas fa-award"></i> Expert Reviews</span>
+                <h2 class="section-title text-white">Hear From Our Students</h2>
+                <p class="section-desc text-light">Real stories from students who transformed their careers with
+                    EduSmart.</p>
+            </div>
+
+            <div class="slider-3d-wrapper fade-up">
+
+                <div class="slider-3d-container" id="slider-3d-container">
+
+                    <div class="card-3d">
+                        <div class="card-top">
+                            <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=150&auto=format&fit=crop"
+                                alt="Student">
+                            <div class="student-info-3d">
+                                <h4>Alex "Sniper" Vance</h4>
+                                <span>@alex_dev_pro</span>
+                            </div>
+                            <i class="fas fa-quote-right quote-bg"></i>
+                        </div>
+                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <p>"EduSmart completely changed my approach to learning. The expert-led courses are insane, and
+                            I've never experienced smoother mentorship!"</p>
+                    </div>
+
+                    <div class="card-3d">
+                        <div class="card-top">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=150&auto=format&fit=crop"
+                                alt="Student">
+                            <div class="student-info-3d">
+                                <h4>Priya Sharma</h4>
+                                <span>@priya_designs</span>
+                            </div>
+                            <i class="fas fa-quote-right quote-bg"></i>
+                        </div>
+                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <p>"The interactive lessons and practical projects gave me the confidence to build real-world
+                            applications. The mentors are top-notch."</p>
+                    </div>
+
+                    <div class="card-3d">
+                        <div class="card-top">
+                            <img src="https://images.unsplash.com/photo-1517365830460-955ce3ccd263?q=80&w=150&auto=format&fit=crop"
+                                alt="Student">
+                            <div class="student-info-3d">
+                                <h4>Sarah Jenkins</h4>
+                                <span>@sarah_data</span>
+                            </div>
+                            <i class="fas fa-quote-right quote-bg"></i>
+                        </div>
+                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <p>"Getting globally certified through EduSmart was a game-changer for my career. The
+                            zero-latency platform makes learning an absolute joy."</p>
+                    </div>
+
+                    <div class="card-3d">
+                        <div class="card-top">
+                            <img src="https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?q=80&w=150&auto=format&fit=crop"
+                                alt="Student">
+                            <div class="student-info-3d">
+                                <h4>Rahul Verma</h4>
+                                <span>@rahul_coder</span>
+                            </div>
+                            <i class="fas fa-quote-right quote-bg"></i>
+                        </div>
+                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <p>"I struggled with complex logic until I found the courses here. The step-by-step guidance
+                            made everything so much easier to grasp."</p>
+                    </div>
+
+                </div>
+
+                <div class="slider-controls-3d">
+                    <button id="prev-3d"><i class="fas fa-chevron-left"></i></button>
+                    <button id="next-3d"><i class="fas fa-chevron-right"></i></button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="news-section" id="news">
+        <div class="news-container">
+
+            <div class="section-header fade-up">
+                <span class="section-tag-purple"><i class="fas fa-bullhorn"></i> Latest Updates</span>
+                <h2 class="section-title-dark">News, Events & Announcements</h2>
+                <p class="section-desc-dark">Stay updated with the latest educational programs, workshops, competitions,
+                    and campus activities.</p>
+            </div>
+
+            <div class="news-grid">
+
+                <div class="news-card fade-up">
+                    <div class="news-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1544531586-fde5298cdd40?q=80&w=600&auto=format&fit=crop"
+                            alt="Workshop Event">
+                        <div class="news-date">
+                            <span class="date-day">15</span>
+                            <span class="date-month">Oct</span>
+                        </div>
+                    </div>
+                    <div class="news-content">
+                        <span class="news-category">Workshop</span>
+                        <h3 class="news-title">Global Masterclass on AI & Machine Learning</h3>
+                        <p class="news-excerpt">Join industry leaders for a 2-day intensive workshop on the future of
+                            artificial intelligence and its real-world applications.</p>
+                        <a href="#" class="read-more-btn">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="news-card fade-up" style="transition-delay: 0.1s;">
+                    <div class="news-img-wrapper">
+                        <img src="./asset/sec8.webp" alt="Hackathon Event">
+                        <div class="news-date">
+                            <span class="date-day">22</span>
+                            <span class="date-month">Oct</span>
+                        </div>
+                    </div>
+                    <div class="news-content">
+                        <span class="news-category">Competition</span>
+                        <h3 class="news-title">National Level Code-a-thon 2026 Announced</h3>
+                        <p class="news-excerpt">Registrations are now open for the biggest coding battle of the year.
+                            Compete with top minds and win exciting prizes.</p>
+                        <a href="#" class="read-more-btn">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="news-card fade-up" style="transition-delay: 0.2s;">
+                    <div class="news-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?q=80&w=600&auto=format&fit=crop"
+                            alt="Graduation Event">
+                        <div class="news-date">
+                            <span class="date-day">05</span>
+                            <span class="date-month">Nov</span>
+                        </div>
+                    </div>
+                    <div class="news-content">
+                        <span class="news-category">Campus Activity</span>
+                        <h3 class="news-title">Annual Convocation & Alumni Meet-Up</h3>
+                        <p class="news-excerpt">Celebrate the success of our graduating batch. Network with successful
+                            alumni and explore new career opportunities.</p>
+                        <a href="#" class="read-more-btn">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section class="live-section" id="live-zone">
+        <div class="live-glow-bg"></div>
+
+        <div class="live-container">
+
+            <div class="section-header fade-up" style="text-align: center;">
+                <span class="section-tag-gold"><i class="fas fa-broadcast-tower"></i> Live Community Zone</span>
+                <h2 class="section-title text-white">Learn Together in Real Time</h2>
+                <p class="section-desc text-light" style="margin: 0 auto 50px auto;">Join live classes, interact with
+                    teachers, ask doubts instantly, and collaborate with students worldwide.</p>
+            </div>
+
+            <div class="live-split-layout">
+                <div class="live-video-box fade-up">
+                    <div class="live-badge">
+                        <span class="live-dot"></span> LIVE NOW
+                    </div>
+
+                    <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?q=80&w=800&auto=format&fit=crop"
+                        alt="Live Class" class="teacher-img">
+
+                    <div class="video-controls">
+                        <button class="control-btn"><i class="fas fa-microphone"></i></button>
+                        <button class="control-btn"><i class="fas fa-video"></i></button>
+                        <button class="control-btn"><i class="fas fa-desktop"></i></button>
+                        <button class="control-btn end-call"><i class="fas fa-phone-slash"></i></button>
+                    </div>
+                </div>
+
+                <div class="live-chat-box fade-up" style="transition-delay: 0.2s;">
+
+                    <div class="chat-header">
+                        <h3><i class="fas fa-comments"></i> Class Discussion</h3>
+                        <span class="online-count"><i class="fas fa-users"></i> 1,245 Online</span>
+                    </div>
+
+                    <div class="chat-stream" id="chat-stream">
+
+                        <div class="chat-msg msg-1">
+                            <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=50&auto=format&fit=crop"
+                                alt="User">
+                            <div class="msg-content">
+                                <h4>Rahul V. <span>2 mins ago</span></h4>
+                                <p>Could you explain the AI logic again?</p>
+                            </div>
+                        </div>
+
+                        <div class="chat-msg msg-2">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=50&auto=format&fit=crop"
+                                alt="User">
+                            <div class="msg-content">
+                                <h4>Priya S. <span>1 min ago</span></h4>
+                                <p>Yes, that part was a bit tricky! 🤔</p>
+                            </div>
+                        </div>
+
+                        <div class="chat-msg msg-3 tutor-msg">
+                            <div class="tutor-icon"><i class="fas fa-crown"></i></div>
+                            <div class="msg-content">
+                                <h4 class="tutor-name">Dr. Sarah (Host) <span>Just now</span></h4>
+                                <p>Sure! Let me bring up the diagram again. Look at the shared screen.</p>
+                            </div>
+                        </div>
+
+                        <div class="floating-emojis">
+                            <span class="emoji e-1">👍</span>
+                            <span class="emoji e-2">❤️</span>
+                            <span class="emoji e-3">🔥</span>
+                            <span class="emoji e-4">👏</span>
+                        </div>
+
+                    </div>
+
+                    <div class="chat-input-area">
+                        <input type="text" id="chat-input" placeholder="Ask a question...">
+                        <button id="chat-send-btn"><i class="fas fa-paper-plane"></i></button>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <section class="cta-section" id="join-us">
+
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+
+        <div class="cta-container fade-up">
+            <div class="cta-content">
+                <h2 class="cta-title">Start Your Learning Journey Today</h2>
+                <p class="cta-desc">Join thousands of learners and take the next step toward academic excellence and
+                    career success.</p>
+
+                <div class="cta-buttons">
+                    <button class="btn-cta-primary" onclick="window.location.href='createaccount.html'">
+                        Join Now for Free <i class="fas fa-rocket" style="margin-left: 8px;"></i>
+                    </button>
+                    <button class="btn-cta-secondary">
+                        Contact Us
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-section">
+        <div class="footer-container fade-up">
+
+            <div class="footer-grid">
+
+                <div class="footer-col brand-col">
+                    <div class="footer-logo">
+                        <i class="fas fa-bolt"></i> <span>EduSmart</span>
+                    </div>
+                    <p>"Your gateway to advanced learning. Master new skills with industry experts, interactive live
+                        sessions, and a next-gen educational platform."</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-google"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col links-col">
+                    <h3>Platform</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Service</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col support-col">
+                    <h3>Support</h3>
+                    <ul>
+                        <li class="support-item"><i class="far fa-envelope"></i> support@edusmart.learning</li>
+                        <li class="support-item"><i class="fas fa-map-marker-alt"></i> Salem City, Tamil Nadu</li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Newsletter -->
+                <div class="footer-col newsletter-col">
+                    <h3>Newsletter</h3>
+                    <p>Get exclusive course drops & tournament alerts.</p>
+                    <form class="newsletter-form" id="newsletter-form" novalidate>
+                        <div class="newsletter-input-wrap">
+                            <input type="email" id="newsletter-email" placeholder="Enter student email">
+                            <button type="submit">JOIN</button>
+                        </div>
+                        <span id="email-msg" class="form-msg"></span>
+                    </form>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 EduSmart Learning. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Terms & Conditions</a> | <a href="#">Privacy Policy</a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

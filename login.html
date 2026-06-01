@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Login - EduSmart</title>
+    <style>
+        /* BASE STYLES */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        /* Modern Purple Gradient Background */
+        body {
+            background: linear-gradient(135deg, #4C1D95 0%, #2E1065 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        /* THE BOX CONTAINER */
+        .login-container {
+            display: flex;
+            width: 100%;
+            max-width: 1000px;
+            background: #ffffff;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            overflow: hidden;
+        }
+
+        /* LEFT SIDE (Form Area) */
+        .left-panel {
+            flex: 1;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        /* Back to Home Link */
+        .back-home {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: rgb(46 16 101 / 94%);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            margin-bottom: 25px;
+            transition: 0.3s;
+            width: fit-content;
+        }
+
+        .back-home:hover {
+            color: #FBBF24;
+        }
+
+        .back-home svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        /* Logo */
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+            color: #4C1D95;
+        }
+
+        .logo svg {
+            width: 32px;
+            height: 32px;
+            color: #FBBF24;
+        }
+
+        .logo span {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        h2 {
+            color: #2E1065;
+            margin-bottom: 5px;
+            font-size: 26px;
+        }
+
+        p {
+            color: #64748b;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+
+        /* Role Selector */
+        .role-selector {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .role-card {
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 10px;
+            cursor: pointer;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .role-card h3 {
+            margin-top: 5px;
+            color: #0F172A;
+            font-size: 15px;
+        }
+
+        .role-card.active {
+            border-color: #FBBF24;
+            background: rgba(251, 191, 36, 0.1);
+        }
+
+        /* Input Fields */
+        .input-group {
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: #2E1065;
+            font-size: 13px;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1.5px solid #cbd5e1;
+            border-radius: 8px;
+            outline: none;
+            font-size: 14px;
+            transition: 0.3s;
+            color: #0F172A;
+        }
+
+        input:focus {
+            border-color: #FBBF24;
+            box-shadow: 0 0 0 3px rgba(251, 191, 36, 0.2);
+        }
+
+        /* Fix browser default eye */
+        input[type="password"]::-ms-reveal,
+        input[type="password"]::-ms-clear {
+            display: none;
+        }
+
+        /* Validation Errors */
+        .field-error {
+            color: #ef4444;
+            font-size: 12px;
+            font-weight: 600;
+            margin-top: 5px;
+            display: none;
+        }
+
+        .input-error input {
+            border-color: #ef4444;
+        }
+
+        /* Password Eye */
+        .pwd-wrapper {
+            position: relative;
+        }
+
+        .eye-btn {
+            position: absolute;
+            right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #64748b;
+            display: flex;
+            align-items: center;
+        }
+
+        .eye-btn:hover {
+            color: #4C1D95;
+        }
+
+        .eye-btn svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        /* Form Options (Remember Me & Forgot Password) */
+        .form-options {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            margin-top: -5px;
+        }
+
+        .remember-me {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #64748b;
+            font-weight: 500;
+            cursor: pointer;
+            margin-bottom: 0;
+            font-size: 13px;
+        }
+
+        .remember-me input[type="checkbox"] {
+            width: 16px;
+            height: 16px;
+            padding: 0;
+            margin: 0;
+            border-radius: 4px;
+            accent-color: #4C1D95;
+            cursor: pointer;
+        }
+
+        .forgot-pwd {
+            color: #4C1D95;
+            font-size: 13px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .forgot-pwd:hover {
+            color: #FBBF24;
+        }
+
+        /* Submit Button */
+        .btn-submit {
+            width: 100%;
+            padding: 12px;
+            background: #FBBF24;
+            color: #2E1065;
+            border: none;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(251, 191, 36, 0.4);
+            background: #F59E0B;
+        }
+
+        /* Social Login Section */
+        .social-login {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .social-login p {
+            color: #64748b;
+            font-size: 13px;
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        .social-login p::before,
+        .social-login p::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            width: 30%;
+            height: 1px;
+            background: #e2e8f0;
+        }
+
+        .social-login p::before {
+            left: 0;
+        }
+
+        .social-login p::after {
+            right: 0;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .social-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 1px solid #cbd5e1;
+            background: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: 0.3s;
+            color: #4C1D95;
+        }
+
+        .social-btn:hover {
+            background: #f8fafc;
+            border-color: #FBBF24;
+            color: #FBBF24;
+            transform: translateY(-2px);
+        }
+
+        .social-btn svg {
+            width: 18px;
+            height: 18px;
+            fill: currentColor;
+        }
+
+        /* Create Account Link */
+        .links {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        .links a {
+            color: #4C1D95;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .links a:hover {
+            color: #FBBF24;
+        }
+
+        /* RIGHT PANEL (Image Slider) */
+        .right-panel {
+            flex: 1.2;
+            position: relative;
+            background: #000;
+        }
+
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .slide.active {
+            opacity: 1;
+        }
+
+        .image-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(46, 16, 101, 0.7), rgba(251, 191, 36, 0.3));
+            z-index: 10;
+        }
+
+        /* MOBILE RESPONSIVE */
+        @media(max-width: 850px) {
+            .login-container {
+                flex-direction: column;
+                max-width: 450px;
+            }
+
+            .right-panel {
+                display: block;
+                /* Hide aana image-ah thirumba kondu varom */
+                min-height: 200px;
+                /* Mobile-la image-oda height */
+            }
+
+            .left-panel {
+                padding: 30px 25px;
+            }
+        }
+
+        /* --- 3-SECOND PRELOADER CSS (PURPLE) --- */
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #4C1D95 0%, #2E1065 100%);
+            z-index: 99999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: opacity 0.8s ease, visibility 0.8s ease;
+        }
+
+        .loader-content {
+            text-align: center;
+        }
+
+        .loader-icon {
+            font-size: 60px;
+            margin-bottom: 20px;
+            color: #FBBF24;
+            animation: pulse 1.5s infinite;
+        }
+
+        .loader-text {
+            font-size: 32px;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 25px;
+            letter-spacing: 1px;
+        }
+
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 4px solid rgba(251, 191, 36, 0.3);
+            border-top-color: #FBBF24;
+            border-radius: 50%;
+            margin: 0 auto;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="preloader">
+        <div class="loader-content">
+            <i class="fas fa-graduation-cap loader-icon"></i>
+            <h2 class="loader-text">EduSmart</h2>
+            <div class="spinner"></div>
+        </div>
+    </div>
+
+    <div class="login-container">
+
+        <!-- LEFT PANEL: FORM -->
+        <div class="left-panel">
+
+            <!-- Back to Home Link -->
+            <a href="index.html" class="back-home">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <line x1="19" y1="12" x2="5" y2="12"></line>
+                    <polyline points="12 19 5 12 12 5"></polyline>
+                </svg>
+                Back to Home
+            </a>
+
+            <div class="logo">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z">
+                    </path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z">
+                    </path>
+                </svg>
+                <span>EduSmart</span>
+            </div>
+
+            <h2>Welcome Back</h2>
+            <p>Login to access your dashboard</p>
+
+            <div class="role-selector">
+                <div class="role-card active" id="role-student">
+                    <div style="font-size: 24px;">👨‍🎓</div>
+                    <h3>Student</h3>
+                </div>
+                <div class="role-card" id="role-teacher">
+                    <div style="font-size: 24px;">👨‍🏫</div>
+                    <h3>Teacher</h3>
+                </div>
+            </div>
+
+            <form id="loginForm">
+                <div class="input-group" id="emailGroup">
+                    <label>Email Address</label>
+                    <input type="email" id="email" placeholder="Enter email">
+                    <div class="field-error" id="emailError">Email is required</div>
+                </div>
+
+                <div class="input-group" id="pwdGroup">
+                    <label>Password</label>
+                    <div class="pwd-wrapper">
+                        <input type="password" id="password" placeholder="Enter password">
+                        <button type="button" class="eye-btn" id="toggleEye">
+                            <svg id="eyeIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24M1 1l22 22">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="field-error" id="pwdError">Password is required</div>
+                </div>
+
+                <!-- Remember Me & Forgot Password -->
+                <div class="form-options">
+                    <label class="remember-me">
+                        <input type="checkbox"> Remember me
+                    </label>
+                    <a href="#" class="forgot-pwd">Forgot Password?</a>
+                </div>
+
+                <button type="submit" class="btn-submit" id="submitBtn">Login as Student</button>
+            </form>
+
+            <div class="social-login">
+                <p>or continue with</p>
+                <div class="social-icons">
+                    <button class="social-btn">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M12.24 10.285V14.4h6.806c-.275 1.765-2.056 5.174-6.806 5.174-4.095 0-7.439-3.389-7.439-7.574s3.345-7.574 7.439-7.574c2.33 0 3.891.989 4.785 1.849l3.254-3.138C18.189 1.186 15.479 0 12.24 0c-6.635 0-12 5.365-12 12s5.365 12 12 12c6.926 0 11.52-4.869 11.52-11.726 0-.788-.085-1.39-.189-1.989H12.24z" />
+                        </svg>
+                    </button>
+                    <button class="social-btn">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+                        </svg>
+                    </button>
+                    <button class="social-btn">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="links">
+                <p>New here? <a href="createaccount.html">Create Account</a></p>
+            </div>
+        </div>
+
+        <!-- RIGHT PANEL: IMAGE SLIDER -->
+        <div class="right-panel">
+            <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1000&auto=format&fit=crop"
+                class="slide active">
+            <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=1000&auto=format&fit=crop"
+                class="slide">
+            <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1000&auto=format&fit=crop"
+                class="slide">
+            <div class="image-overlay"></div>
+        </div>
+
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        // Role Selection Logic
+        let currentRole = 'student';
+        const studentCard = document.getElementById('role-student');
+        const teacherCard = document.getElementById('role-teacher');
+        const submitBtn = document.getElementById('submitBtn');
+
+        studentCard.addEventListener('click', () => {
+            currentRole = 'student';
+            studentCard.classList.add('active');
+            teacherCard.classList.remove('active');
+            submitBtn.innerText = 'Login as Student';
+        });
+
+        teacherCard.addEventListener('click', () => {
+            currentRole = 'teacher';
+            teacherCard.classList.add('active');
+            studentCard.classList.remove('active');
+            submitBtn.innerText = 'Login as Teacher';
+        });
+
+        // Password Eye Toggle Logic
+        const toggleEye = document.getElementById('toggleEye');
+        const pwdInput = document.getElementById('password');
+        const eyeIcon = document.getElementById('eyeIcon');
+
+        const eyeOpenSVG = `<path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle>`;
+        const eyeClosedSVG = `<path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24M1 1l22 22"></path>`;
+
+        toggleEye.addEventListener('click', () => {
+            if (pwdInput.type === 'password') {
+                pwdInput.type = 'text';
+                eyeIcon.innerHTML = eyeOpenSVG;
+            } else {
+                pwdInput.type = 'password';
+                eyeIcon.innerHTML = eyeClosedSVG;
+            }
+        });
+
+        // Form Validation (Including 6 characters limit)
+        document.getElementById('loginForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const emailInput = document.getElementById('email');
+            const pwdInput = document.getElementById('password');
+            const emailGroup = document.getElementById('emailGroup');
+            const pwdGroup = document.getElementById('pwdGroup');
+            const emailError = document.getElementById('emailError');
+            const pwdError = document.getElementById('pwdError');
+
+            const emailVal = emailInput.value.trim();
+            const pwdVal = pwdInput.value.trim();
+
+            let isValid = true;
+
+            if (emailVal === '') {
+                emailGroup.classList.add('input-error');
+                emailError.innerText = 'Email is required';
+                emailError.style.display = 'block';
+                isValid = false;
+            } else {
+                emailGroup.classList.remove('input-error');
+                emailError.style.display = 'none';
+            }
+
+            if (pwdVal === '') {
+                pwdGroup.classList.add('input-error');
+                pwdError.innerText = 'Password is required';
+                pwdError.style.display = 'block';
+                isValid = false;
+            } else if (pwdVal.length < 6) {
+                pwdGroup.classList.add('input-error');
+                pwdError.innerText = 'Password must be at least 6 characters';
+                pwdError.style.display = 'block';
+                isValid = false;
+            } else {
+                pwdGroup.classList.remove('input-error');
+                pwdError.style.display = 'none';
+            }
+
+            if (isValid) {
+                // Ithu thaan antha puthu line! (Email-ah save pannuthu)
+                localStorage.setItem('userEmail', emailVal);
+
+                if (currentRole === 'student') {
+                    window.location.href = 'dashboard1.html';
+                } else {
+                    window.location.href = 'dashboard2.html';
+                }
+            }
+        });
+
+        document.getElementById('email').addEventListener('input', function () {
+            document.getElementById('emailGroup').classList.remove('input-error');
+            document.getElementById('emailError').style.display = 'none';
+        });
+
+        document.getElementById('password').addEventListener('input', function () {
+            document.getElementById('pwdGroup').classList.remove('input-error');
+            document.getElementById('pwdError').style.display = 'none';
+        });
+
+        // Image Slider Logic
+        let slideIndex = 0;
+        const slides = document.querySelectorAll('.slide');
+
+        if (slides.length > 0) {
+            setInterval(() => {
+                slides[slideIndex].classList.remove('active');
+                slideIndex = (slideIndex + 1) % slides.length;
+                slides[slideIndex].classList.add('active');
+            }, 3000);
+        }
+
+        // --- PRELOADER LOGIC (3 SECONDS) ---
+        window.addEventListener('load', () => {
+            const preloader = document.getElementById('preloader');
+
+            // Page scroll aagakudathu nu block pandrom
+            document.body.style.overflow = 'hidden';
+
+            setTimeout(() => {
+                preloader.style.opacity = '0';
+                preloader.style.visibility = 'hidden';
+
+                // 3 Seconds appuram scroll allow pandrom
+                document.body.style.overflow = 'auto';
+                document.body.style.overflowX = 'hidden'; // Keeps horizontal scroll locked
+            }, 3000); // 3000ms = 3 Seconds
+        });
+    </script>
+</body>
+
+</html>
