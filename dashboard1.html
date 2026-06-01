@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Dashboard - EduSmart</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- <link rel="stylesheet" href="common.css"> -->
     <!-- Chart.js for Graphs -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
@@ -53,6 +54,29 @@
             transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             overflow-y: auto;
         }
+
+        /* ==========================================================================
+   NAVBAR LOGO STYLING
+   ========================================================================== */
+.nav-logo {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+
+.nav-logo .logo {
+    height: 45px; /* Unga image size-ku etha mathiri mathikonga */
+    width: auto;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    /* Yellow logo-ku oru light gold drop shadow */
+    filter: drop-shadow(0 2px 5px rgba(251, 191, 36, 0.3)); 
+}
+
+.nav-logo:hover .logo {
+    transform: scale(1.05); /* Light-ah zoom aagum */
+    filter: drop-shadow(0 4px 10px rgba(251, 191, 36, 0.6)); /* Glow athigamagum */
+}
 
         .sidebar-logo {
             display: flex;
@@ -967,23 +991,16 @@
     <div id="preloader">
         <div class="loader-content">
             <i class="fas fa-graduation-cap loader-icon"></i>
-            <h2 class="loader-text">EduSmart</h2>
+            <h2 class="loader-text">Stackly Education</h2>
             <div class="spinner"></div>
         </div>
     </div>
 
     <!-- SIDEBAR -->
     <nav class="sidebar" id="sidebar">
-        <div class="sidebar-logo">
-            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z">
-                </path>
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z">
-                </path>
-            </svg>
-            EduSmart
-        </div>
+        <div class="nav-logo">
+                <img src="./asset/yellow_logo.webp" alt="logo" class="logo">
+            </div>
         <ul class="nav-menu">
             <li class="nav-item active" onclick="switchView('view-overview', this)">📊 Dashboard Overview</li>
             <li class="nav-item" onclick="switchView('view-courses', this)">📚 My Courses</li>

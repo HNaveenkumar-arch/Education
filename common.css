@@ -112,11 +112,26 @@ body {
 }
 
 /* --- Logo Section --- */
+/* ==========================================================================
+   NAVBAR LOGO STYLING
+   ========================================================================== */
 .nav-logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  cursor: pointer;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.nav-logo .logo {
+    height: 45px; /* Unga image size-ku etha mathiri mathikonga */
+    width: auto;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    /* Yellow logo-ku oru light gold drop shadow */
+    filter: drop-shadow(0 2px 5px rgba(251, 191, 36, 0.3)); 
+}
+
+.nav-logo:hover .logo {
+    transform: scale(1.05); /* Light-ah zoom aagum */
+    filter: drop-shadow(0 4px 10px rgba(251, 191, 36, 0.6)); /* Glow athigamagum */
 }
 .logo-icon {
   color: #fbbf24;
