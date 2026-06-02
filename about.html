@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./asset/logo_Favicon.webp">
+    <title>Stackly - About</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="about.css">
+</head>
+
+<body>
+
+    <div id="preloader">
+        <div class="loader-content">
+            <i class="fas fa-graduation-cap loader-icon"></i>
+            <h2>Stackly Education</h2>
+            <div class="spinner"></div>
+        </div>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+
+            <div class="nav-logo">
+                <a href="index.html">
+                    <img src="./asset/yellow_logo.webp" alt="logo" class="logo">
+                </a>
+
+            </div>
+
+            <ul class="nav-menu">
+                <li><a href="index.html" class="menu-link" data-page="Home"><i class="fas fa-home"></i> Home</a>
+                </li>
+                <li><a href="about.html" class="menu-link  active" data-page="About"><i class="fas fa-info-circle"></i>
+                        About</a></li>
+                <li><a href="course.html" class="menu-link" data-page="Course"><i class="fas fa-laptop-code"></i> Course</a></li>
+                <li><a href="blog.html" class="menu-link" data-page="Blog"><i class="fas fa-newspaper"></i> Blog</a></li>
+                <li><a href="contact.html" class="menu-link" data-page="Contact"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button class="btn-login" onclick="window.location.href='login.html'">Login</button>
+                <button class="btn-get-started" onclick="window.location.href='createaccount.html'">Get Started</button>
+            </div>
+
+            <button class="hamburger" id="hamburger-btn" aria-label="Toggle Menu">
+                <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+            </button>
+        </div>
+
+        <div class="mobile-dropdown" id="mobile-menu">
+            <ul class="mobile-nav-links">
+                <li><a href="index.html" class="mobile-link" data-page="Home"><i class="fas fa-home"></i>Home</a></li>
+                <li><a href="about.html" class="mobile-link  active" data-page="About"><i
+                            class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="course.html" class="mobile-link" data-page="Course"><i class="fas fa-laptop-code"></i> Course</a>
+                </li>
+                <li><a href="blog.html" class="mobile-link" data-page="Blog"><i class="fas fa-newspaper"></i> Blog</a></li>
+                <li><a href="contact.html" class="mobile-link" data-page="Contact"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
+            <div class="mobile-btn-wrapper">
+                <button class="btn-login mobile-login-btn" onclick="window.location.href='login.html'">Login</button>
+                <button class="btn-get-started mobile-get-btn" onclick="window.location.href='createaccount.html'">Get
+                    Started</button>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- ====================================
+   ABOUT MAIN CONTENT SECTION 
+==================================== -->
+    <section class="about-main-section">
+        <!-- Dark Purple Overlay for better text visibility over background image -->
+        <div class="about-overlay"></div>
+
+        <div class="about-wrapper">
+
+            <div class="about-content-grid">
+
+                <!-- Left Side: Text Content -->
+                <div class="about-text-box" data-aos="fade-right" data-aos-duration="1200">
+
+                    <!-- Updated Breadcrumb with Clickable Home Link -->
+                    <div class="breadcrumb-badge">
+                        <a href="index.html" class="home-link">Home</a>
+                        <span class="text-gold arrows">»</span>
+                        <span class="text-gold about-text">About</span>
+                    </div>
+
+                    <h2 class="section-title">
+                        Empowering Students Through <br>
+                        <span class="text-gold">Digital Education</span>
+                    </h2>
+                    <p class="about-description">
+                        At Stackly Education, we believe in making quality learning accessible to everyone.
+                        Born from a passion for technology and teaching, our platform connects industry
+                        experts with eager minds.
+                    </p>
+                    <p class="about-description">
+                        Whether you're starting your coding journey or advancing your career, we provide
+                        the tools, interactive environments, and guidance you need to succeed in the modern digital
+                        world.
+                    </p>
+
+                    <ul class="about-features-list">
+                        <li data-aos="fade-up" data-aos-delay="100">
+                            <i class="fas fa-check-circle"></i> Industry-Relevant Curriculum
+                        </li>
+                        <li data-aos="fade-up" data-aos-delay="200">
+                            <i class="fas fa-check-circle"></i> Expert Mentorship & Live Classes
+                        </li>
+                        <li data-aos="fade-up" data-aos-delay="300">
+                            <i class="fas fa-check-circle"></i> Community-Driven Learning
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Right Side: Image Content -->
+                <div class="about-image-box" data-aos="fade-left" data-aos-duration="1200">
+                    <img src="./asset/sec1.webp" alt="Students Learning" class="main-about-img">
+
+                    <!-- Floating Experience Badge -->
+                    <div class="experience-badge" data-aos="zoom-in" data-aos-delay="500">
+                        <h3>10+</h3>
+                        <p>Years of <br> Excellence</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ====================================
+   OUR STORY TIMELINE SECTION 
+==================================== -->
+    <section class="timeline-section">
+        <div class="timeline-header" data-aos="fade-up">
+            <span class="section-badge">Our Journey</span>
+            <h2 class="section-title">The <span class="text-gold">Story</span> So Far</h2>
+        </div>
+
+        <div class="timeline-container">
+            <!-- Central Vertical Line -->
+            <div class="timeline-line"></div>
+
+            <!-- 2022: Started Journey -->
+            <div class="timeline-item left">
+                <div class="timeline-icon" data-aos="zoom-in" data-aos-delay="100">
+                    <i class="fas fa-rocket"></i>
+                </div>
+                <div class="timeline-content" data-aos="fade-right" data-aos-delay="200">
+                    <h3 class="timeline-year text-gold">2022</h3>
+                    <h4 class="timeline-title">Started Journey</h4>
+                    <p>The foundation of our platform was laid with a bold vision to revolutionize digital experiences
+                        and education.</p>
+                </div>
+            </div>
+
+            <!-- 2023: First 100 Clients -->
+            <div class="timeline-item right">
+                <div class="timeline-icon" data-aos="zoom-in" data-aos-delay="200">
+                    <i class="fas fa-users"></i>
+                </div>
+                <div class="timeline-content" data-aos="fade-left" data-aos-delay="300">
+                    <h3 class="timeline-year text-gold">2023</h3>
+                    <h4 class="timeline-title">First 100 Clients</h4>
+                    <p>Gained the trust of our first 100 clients, proving our concept and establishing strong industry
+                        relationships.</p>
+                </div>
+            </div>
+
+            <!-- 2024: Team Expansion -->
+            <div class="timeline-item left">
+                <div class="timeline-icon" data-aos="zoom-in" data-aos-delay="300">
+                    <i class="fas fa-network-wired"></i>
+                </div>
+                <div class="timeline-content" data-aos="fade-right" data-aos-delay="400">
+                    <h3 class="timeline-year text-gold">2024</h3>
+                    <h4 class="timeline-title">Team Expansion</h4>
+                    <p>Scaled our operations, bringing in expert developers, designers, and a dedicated technical
+                        workforce.</p>
+                </div>
+            </div>
+
+            <!-- 2026: Global Projects -->
+            <div class="timeline-item right">
+                <div class="timeline-icon" data-aos="zoom-in" data-aos-delay="400">
+                    <i class="fas fa-globe"></i>
+                </div>
+                <div class="timeline-content" data-aos="fade-left" data-aos-delay="500">
+                    <h3 class="timeline-year text-gold">2026</h3>
+                    <h4 class="timeline-title">Global Projects</h4>
+                    <p>Stepped onto the global stage, delivering advanced digital and educational projects worldwide.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="split-about-section">
+        <div class="split-container">
+
+            <div class="split-image-col" data-aos="fade-right" data-aos-duration="1200">
+                <div class="image-wrapper">
+                    <img src="./asset/sec5.webp" alt="Our Mission at Stackly" class="split-img">
+                </div>
+            </div>
+
+            <div class="split-text-col">
+
+                <div class="content-block" data-aos="fade-up" data-aos-delay="100">
+                    <span class="section-badge">Who We Are</span>
+                    <h2 class="split-title">Building the <span class="text-gold">Future</span> of Learning</h2>
+                    <p class="split-desc">
+                        Stackly Education is more than just an e-learning platform; it is a thriving digital ecosystem.
+                        We bridge the gap between traditional education and modern industry demands by providing
+                        accessible, high-quality, and interactive tech education.
+                    </p>
+                </div>
+
+                <div class="content-block" data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="mission-title"><i class="fas fa-bullseye text-gold"></i> Our Mission</h3>
+                    <p class="split-desc">
+                        To empower the next generation of creators, developers, and leaders. We strive to make
+                        complex technological concepts easy to understand through practical, hands-on learning
+                        experiences that guarantee real-world readiness.
+                    </p>
+                </div>
+
+                <div class="content-block" data-aos="fade-up" data-aos-delay="500">
+                    <h3 class="mission-title"><i class="fas fa-eye text-gold"></i> Our Vision</h3>
+                    <p class="split-desc">
+                        We envision a world where anyone, regardless of their background or location, has the
+                        tools and mentorship necessary to build a successful career in the global tech industry.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ====================================
+   STATS COUNTER SECTION 
+==================================== -->
+    <section class="stats-counter-section">
+        <div class="stats-container">
+
+            <!-- Card 1: Projects -->
+            <div class="stat-card" data-aos="fade-up" data-aos-delay="100">
+                <i class="fas fa-briefcase stat-icon"></i>
+                <div class="stat-number-wrapper">
+                    <span class="stat-number" data-target="500">0</span>
+                    <span class="stat-plus">+</span>
+                </div>
+                <p class="stat-label">Projects Completed</p>
+            </div>
+
+            <!-- Card 2: Clients -->
+            <div class="stat-card" data-aos="fade-up" data-aos-delay="200">
+                <i class="fas fa-users stat-icon"></i>
+                <div class="stat-number-wrapper">
+                    <span class="stat-number" data-target="200">0</span>
+                    <span class="stat-plus">+</span>
+                </div>
+                <p class="stat-label">Happy Clients</p>
+            </div>
+
+            <!-- Card 3: Team -->
+            <div class="stat-card" data-aos="fade-up" data-aos-delay="300">
+                <i class="fas fa-user-tie stat-icon"></i>
+                <div class="stat-number-wrapper">
+                    <span class="stat-number" data-target="50">0</span>
+                    <span class="stat-plus">+</span>
+                </div>
+                <p class="stat-label">Team Members</p>
+            </div>
+
+            <!-- Card 4: Countries -->
+            <div class="stat-card" data-aos="fade-up" data-aos-delay="400">
+                <i class="fas fa-globe stat-icon"></i>
+                <div class="stat-number-wrapper">
+                    <span class="stat-number" data-target="10">0</span>
+                    <span class="stat-plus">+</span>
+                </div>
+                <p class="stat-label">Global Presence</p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ====================================
+   TEAM SHOWCASE SECTION (3D FLIP CARDS)
+==================================== -->
+    <section class="team-section">
+        <div class="team-header" data-aos="fade-up">
+            <span class="section-badge">Our Experts</span>
+            <h2 class="section-title">Meet Our <span class="text-gold">Team</span></h2>
+            <p class="team-subtitle">The brilliant minds behind our digital success.</p>
+        </div>
+
+        <div class="team-container">
+
+            <!-- Team Member 1 -->
+            <div class="team-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="card-inner">
+                    <!-- Front Side -->
+                    <div class="card-front">
+                        <!-- Placeholder image, replace with yours -->
+                        <img src="./asset/c3.webp" alt="Team Member 1">
+                        <div class="front-content">
+                            <h3>Alex Carter</h3>
+                        </div>
+                    </div>
+                    <!-- Back Side -->
+                    <div class="card-back">
+                        <h4 class="text-gold">Lead Developer</h4>
+                        <p class="bio">Expert in React & Node.js. Passionate about building scalable and interactive web
+                            applications.</p>
+                        <div class="team-social">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-github"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Member 2 -->
+            <div class="team-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="./asset/sec5.webp" alt="Team Member 2">
+                        <div class="front-content">
+                            <h3>Sarah Jenkins</h3>
+                        </div>
+                    </div>
+                    <div class="card-back">
+                        <h4 class="text-gold">UI/UX Designer</h4>
+                        <p class="bio">Creative thinker focusing on user-centered design and beautiful digital
+                            experiences.</p>
+                        <div class="team-social">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-dribbble"></i></a>
+                            <a href="#"><i class="fab fa-behance"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Member 3 -->
+            <div class="team-card" data-aos="fade-up" data-aos-delay="500">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="./asset/c6.webp" alt="Team Member 3">
+                        <div class="front-content">
+                            <h3>David Lee</h3>
+                        </div>
+                    </div>
+                    <div class="card-back">
+                        <h4 class="text-gold">Project Manager</h4>
+                        <p class="bio">Ensuring timely delivery of projects while maintaining the highest quality
+                            standards.</p>
+                        <div class="team-social">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="mission-vision-section">
+        <div class="mv-container">
+
+            <div class="mv-card mission-card" data-aos="fade-right" data-aos-duration="1000">
+                <div class="mv-icon-box">
+                    <i class="fas fa-bullseye"></i>
+                </div>
+                <h3>Our Mission</h3>
+                <p>
+                    To empower the next generation of creators, developers, and leaders. We strive to make
+                    complex technological concepts easy to understand through practical, hands-on learning
+                    experiences that guarantee real-world readiness.
+                </p>
+                <a href="#" class="mv-btn">Learn More <i class="fas fa-arrow-right"></i></a>
+
+                <div class="glass-circle circle-1"></div>
+            </div>
+
+            <div class="mv-card vision-card" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                <div class="mv-icon-box">
+                    <i class="fas fa-eye"></i>
+                </div>
+                <h3>Our Vision</h3>
+                <p>
+                    We envision a world where anyone, regardless of their background or location, has the
+                    tools and mentorship necessary to build a successful career in the global tech industry
+                    and shape the digital future.
+                </p>
+                <a href="#" class="mv-btn">Join Us <i class="fas fa-arrow-right"></i></a>
+
+                <div class="glass-circle circle-2"></div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="skills-section">
+        <div class="skills-container">
+
+            <div class="skills-text" data-aos="fade-right" data-aos-duration="1000">
+                <span class="section-badge">Our Expertise</span>
+                <h2 class="section-title">We Have High Skills In <br><span class="text-gold">Digital Technologies</span>
+                </h2>
+                <p class="skills-desc">
+                    Our team is equipped with top-tier industry skills, delivering exceptional results across
+                    development,
+                    design, and digital branding. We turn complex ideas into seamless digital realities.
+                </p>
+
+                <a href="#" class="skills-btn" data-aos="fade-up" data-aos-delay="200">
+                    Explore All Skills <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="skills-bars-wrapper" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+
+                <div class="skill-box">
+                    <div class="skill-info">
+                        <span class="skill-name"><i class="fas fa-code text-gold"></i> Web Development</span>
+                        <span class="skill-percent">90%</span>
+                    </div>
+                    <div class="skill-bar-bg">
+                        <div class="skill-bar-fill" data-width="90"></div>
+                    </div>
+                </div>
+
+                <div class="skill-box">
+                    <div class="skill-info">
+                        <span class="skill-name"><i class="fas fa-paint-brush text-gold"></i> UI/UX Design</span>
+                        <span class="skill-percent">85%</span>
+                    </div>
+                    <div class="skill-bar-bg">
+                        <div class="skill-bar-fill" data-width="85"></div>
+                    </div>
+                </div>
+
+                <div class="skill-box">
+                    <div class="skill-info">
+                        <span class="skill-name"><i class="fas fa-bullhorn text-gold"></i> Branding</span>
+                        <span class="skill-percent">80%</span>
+                    </div>
+                    <div class="skill-bar-bg">
+                        <div class="skill-bar-fill" data-width="80"></div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section class="testimonial-section">
+
+        <div class="testimonial-header" data-aos="fade-up" data-aos-duration="1000">
+            <span class="section-badge">Testimonials</span>
+            <h2 class="section-title">What Our <span class="text-gold">Clients Say</span></h2>
+            <p class="testimonial-subtitle">Don't just take our word for it. Hear from our successful clients.</p>
+        </div>
+
+        <div class="testimonial-slider" data-aos="fade-up" data-aos-delay="200">
+
+            <div class="testimonial-track">
+
+                <div class="testi-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="review">"Stackly completely changed our business! Their web development skills are
+                        top-notch. Highly recommended for any tech project."</p>
+                    <div class="client-info">
+                        <img src="./asset/b4.webp" alt="Client 1">
+                        <div class="client-details">
+                            <h4>Mark Johnson</h4>
+                            <span>CEO, TechNova</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testi-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="review">"The UI/UX design they delivered was beyond our expectations. Our user engagement
+                        increased by 40% in just one month!"</p>
+                    <div class="client-info">
+                        <img src="./asset/c5.webp" alt="Client 2">
+                        <div class="client-details">
+                            <h4>Emily Davis</h4>
+                            <span>Product Manager</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testi-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="review">"A highly professional and dedicated team. Their branding strategies gave our
+                        startup the modern look it desperately needed."</p>
+                    <div class="client-info">
+                        <img src="./asset/c8.webp" alt="Client 3">
+                        <div class="client-details">
+                            <h4>Robert Wilson</h4>
+                            <span>Founder, Creativ</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testi-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="review">"Incredible learning experience and digital solutions. The animations and
+                        responsiveness they built are just flawless."</p>
+                    <div class="client-info">
+                        <img src="./asset/c9.webp" alt="Client 4">
+                        <div class="client-details">
+                            <h4>Sophia Lee</h4>
+                            <span>Marketing Head</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testi-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="review">"Stackly completely changed our business! Their web development skills are
+                        top-notch. Highly recommended for any tech project."</p>
+                    <div class="client-info">
+                        <img src="./asset/b4.webp" alt="Client 1">
+                        <div class="client-details">
+                            <h4>Mark Johnson</h4>
+                            <span>CEO, TechNova</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testi-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="review">"The UI/UX design they delivered was beyond our expectations. Our user engagement
+                        increased by 40% in just one month!"</p>
+                    <div class="client-info">
+                        <img src="./asset/c5.webp" alt="Client 2">
+                        <div class="client-details">
+                            <h4>Emily Davis</h4>
+                            <span>Product Manager</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testi-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="review">"A highly professional and dedicated team. Their branding strategies gave our
+                        startup the modern look it desperately needed."</p>
+                    <div class="client-info">
+                        <img src="./asset/c8.webp" alt="Client 3">
+                        <div class="client-details">
+                            <h4>Robert Wilson</h4>
+                            <span>Founder, Creativ</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testi-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="review">"Incredible learning experience and digital solutions. The animations and
+                        responsiveness they built are just flawless."</p>
+                    <div class="client-info">
+                        <img src="./asset/c9.webp" alt="Client 4">
+                        <div class="client-details">
+                            <h4>Sophia Lee</h4>
+                            <span>Marketing Head</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <section class="why-us-section">
+        <div class="why-us-container">
+
+            <div class="why-us-header" data-aos="fade-up" data-aos-duration="1000">
+                <span class="section-badge">Why Choose Us</span>
+                <h2 class="section-title">What Makes Us <span class="text-gold">Different?</span></h2>
+                <p class="why-us-subtitle">We combine creativity, technology, and strategy to deliver exceptional
+                    results for your business.</p>
+            </div>
+
+            <div class="why-us-grid">
+
+                <div class="why-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="why-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Fast Delivery</h3>
+                    <p>We respect your time. Our team ensures that all projects are delivered on time without
+                        compromising on quality.</p>
+                </div>
+
+                <div class="why-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="why-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Creative Design</h3>
+                    <p>Our UI/UX experts craft visually stunning and user-friendly designs that make your brand stand
+                        out from the crowd.</p>
+                </div>
+
+                <div class="why-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="why-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>24/7 Support</h3>
+                    <p>We are always here for you. Our dedicated support team is available round the clock to solve your
+                        queries.</p>
+                </div>
+
+                <div class="why-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="why-icon">
+                        <i class="fas fa-tags"></i>
+                    </div>
+                    <h3>Affordable Pricing</h3>
+                    <p>Premium quality doesn't have to break the bank. We offer highly competitive and transparent
+                        pricing plans.</p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ====================================
+   CALL TO ACTION (CTA) SECTION
+==================================== -->
+    <section class="cta-section">
+        <!-- Decorative transparent pattern overlay (Optional for texture) -->
+        <div class="cta-overlay"></div>
+
+        <div class="cta-container" data-aos="zoom-in" data-aos-duration="1000">
+            <h2 class="cta-title">Let’s build something <span class="text-gold">amazing</span> together</h2>
+            <p class="cta-subtitle">
+                Ready to take your digital presence to the next level? Our team of experts is here to turn your ideas
+                into reality.
+            </p>
+
+            <div class="cta-buttons" data-aos="fade-up" data-aos-delay="200">
+                <a href="#" class="cta-btn btn-primary">
+                    Get Started <i class="fas fa-rocket"></i>
+                </a>
+                <a href="#" class="cta-btn btn-outline">
+                    Contact Us <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <footer class="footer-section">
+        <div class="footer-container fade-up">
+
+            <div class="footer-grid">
+
+                <div class="footer-col brand-col">
+                    <div class="nav-logo">
+                        <a href="index.html">
+                            <img src="./asset/yellow_logo.webp" alt="logo" class="logo">
+                        </a>
+                    </div>
+                    <p>"Your gateway to advanced learning. Master new skills with industry experts, interactive live
+                        sessions, and a next-gen educational platform."</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-google"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col links-col">
+                    <h3>Platform</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="#">course</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col support-col">
+                    <h3>Support</h3>
+                    <ul>
+                        <li class="support-item"><i class="far fa-envelope"></i> support@edusmart.learning</li>
+                        <li class="support-item"><i class="fas fa-map-marker-alt"></i> Salem City, Tamil Nadu</li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Newsletter -->
+                <div class="footer-col newsletter-col">
+                    <h3>Newsletter</h3>
+                    <p>Get exclusive course drops & tournament alerts.</p>
+                    <form class="newsletter-form" id="newsletter-form" novalidate>
+                        <div class="newsletter-input-wrap">
+                            <input type="email" id="newsletter-email" placeholder="Enter student email">
+                            <button type="submit">JOIN</button>
+                        </div>
+                        <span id="email-msg" class="form-msg"></span>
+                    </form>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 EduSmart Learning. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Terms & Conditions</a> | <a href="#">Privacy Policy</a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <script src="script.js"></script>
+
+    <!-- ====================================
+   STATS COUNTER ANIMATION SCRIPT
+==================================== -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            const counters = document.querySelectorAll('.stat-number');
+            const speed = 100; // Animation speed (kammi aakkuna innum fast-a count aagum)
+
+            // Screen-la indha section theriyum podhu mattum animation start aaga
+            const counterObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const counter = entry.target;
+
+                        const updateCount = () => {
+                            const target = +counter.getAttribute('data-target');
+                            const count = +counter.innerText;
+
+                            // Increment value calculate panradhu
+                            const inc = target / speed;
+
+                            if (count < target) {
+                                counter.innerText = Math.ceil(count + inc);
+                                setTimeout(updateCount, 20); // 20ms kku oru thadava update aagum
+                            } else {
+                                counter.innerText = target;
+                            }
+                        };
+
+                        updateCount();
+                        // Oru thadava animate aanadhukku appuram stop panna
+                        observer.unobserve(counter);
+                    }
+                });
+            }, {
+                threshold: 0.5 // Section 50% screen-la vandhadhum start aagum
+            });
+
+            counters.forEach(counter => {
+                counterObserver.observe(counter);
+            });
+
+        });
+
+
+        document.addEventListener('DOMContentLoaded', () => {
+
+            const skillBars = document.querySelectorAll('.skill-bar-fill');
+
+            // Scroll panni paakum podhu animation trigger aagum
+            const skillObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const bar = entry.target;
+                        const targetWidth = bar.getAttribute('data-width');
+
+                        // Width-a 0 la irundhu target percentage-ku mathuradhu
+                        bar.style.width = targetWidth + '%';
+
+                        // Oru thadava animate aanadhum observe panradha niruthidum
+                        observer.unobserve(bar);
+                    }
+                });
+            }, {
+                threshold: 0.5 // Section 50% screen-la theriyum podhu start aagum
+            });
+
+            skillBars.forEach(bar => {
+                skillObserver.observe(bar);
+            });
+
+        });
+    </script>
+</body>
+
+</html>

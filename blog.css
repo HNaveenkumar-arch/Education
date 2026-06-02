@@ -1,0 +1,995 @@
+/* --- General Split Hero Setup with BACKGROUND IMAGE --- */
+.edu-hero-split {
+    width: 100%;
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    padding: 5% 8%;
+    /* Inga thaan background image + dark purple overlay add panirkom */
+    background-image: linear-gradient(135deg, rgba(43, 17, 62, 0.95) 0%, rgba(23, 7, 36, 0.90) 100%), 
+                      url('./asset/sec9.webp');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Oru nalla parallax feel tharum */
+    overflow: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Flexbox Container to hold Left and Right sides */
+.edu-container-split {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    gap: 50px; /* Space between text and image */
+}
+
+/* Left Content Area */
+.edu-content-left {
+    flex: 1;
+    max-width: 650px;
+}
+
+/* --- Custom Breadcrumb --- */
+.custom-breadcrumb {
+    display: inline-flex;
+    align-items: center;
+    background-color: #120e1a; /* Dark box */
+    border-left: 6px solid #eebb30; /* Gold border */
+    border-radius: 0 6px 6px 0;
+    padding: 10px 20px;
+    margin-top: 52px;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.custom-breadcrumb .home-link {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.custom-breadcrumb .home-link:hover {
+    color: #eebb30;
+}
+
+.custom-breadcrumb .arrow {
+    color: #eebb30;
+    margin: 0 10px;
+    font-size: 1.2rem;
+}
+
+.custom-breadcrumb .current-page {
+    color: #eebb30;
+}
+
+/* --- Typography & Buttons --- */
+.edu-heading {
+    color: #ffffff;
+    font-size: clamp(2.5rem, 4.5vw, 4rem);
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.edu-heading .highlight-gold {
+    color: #eebb30; /* Gold Accent */
+}
+
+.edu-subtext {
+    font-size: clamp(1rem, 1.8vw, 1.25rem);
+    color: #d1c4e9; /* Light purple-grey for description */
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+/* CTA Button */
+.edu-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background-color: #eebb30;
+    color: #2b113e;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(238, 187, 48, 0.2);
+}
+
+.edu-btn:hover {
+    background-color: #ffd754;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(238, 187, 48, 0.4);
+}
+
+/* --- Right Image Area & Hover Zoom Magic --- */
+.edu-image-right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* The wrapper hides the overflow so the image zooms inside its box */
+.image-zoom-wrapper {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 16px;
+    overflow: hidden; /* CRITICAL for zoom effect */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5); /* Deep shadow */
+    border: 2px solid rgba(238, 187, 48, 0.3); /* Subtle gold border */
+}
+
+.image-zoom-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1); /* Smooth zoom animation */
+}
+
+/* The actual Zoom Trigger */
+.image-zoom-wrapper:hover img {
+    transform: scale(1.08); /* Zooms in by 8% */
+}
+
+/* --- Scroll Animations --- */
+.edu-animate {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.edu-animate.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.delay-1 { transition-delay: 0.1s; }
+.delay-2 { transition-delay: 0.2s; }
+.delay-3 { transition-delay: 0.3s; }
+.delay-4 { transition-delay: 0.4s; }
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 968px) {
+    .edu-hero-split {
+        padding: 12% 6%;
+    }
+    
+    .edu-container-split {
+        flex-direction: column; /* Stacks text on top, image on bottom */
+        text-align: center;
+        gap: 40px;
+    }
+    
+    .edu-content-left {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centers items inside the left block */
+    }
+
+    .edu-image-right {
+        justify-content: center;
+        width: 100%;
+    }
+}
+
+
+/* --- Trending Topics Strip Setup --- */
+.edu-trending-strip {
+    width: 100%;
+    padding: 30px 8%;
+    background-color: #1a0b26; /* Dark purple */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+}
+
+.trending-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+/* Header (Icon + Text) */
+.trending-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    z-index: 2;
+    background-color: #1a0b26; /* Keeps background solid so tags slide under it beautifully on small screens */
+}
+
+.trending-header h2 {
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* --- Marquee Infinite Scroll Setup --- */
+.marquee-wrapper {
+    flex-grow: 1;
+    overflow: hidden; /* Hides the scrollbar completely */
+    position: relative;
+    /* Optional: Faded edges for a premium look */
+    mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+}
+
+.marquee-track {
+    display: flex;
+    width: max-content;
+    /* 20 seconds for full scroll, linear speed, repeats infinitely */
+    animation: scrollMarquee 25s linear infinite; 
+}
+
+/* PAUSE on Hover! Very important for usability */
+.marquee-track:hover {
+    animation-play-state: paused;
+}
+
+.marquee-group {
+    display: flex;
+    gap: 15px;
+    padding-right: 15px; /* Matches the gap */
+}
+
+/* Keyframes to move it perfectly */
+@keyframes scrollMarquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); } 
+    /* -50% works perfectly because there are exactly 2 identical groups */
+}
+
+/* --- Individual Tag Pill --- */
+.tag-pill {
+    background-color: rgba(255, 255, 255, 0.08); 
+    color: #d1c4e9; 
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 10px 24px;
+    border-radius: 50px; 
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap; 
+    transition: all 0.3s ease;
+}
+
+/* Hover and Active States */
+.tag-pill:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    transform: scale(1.05); /* Slight pop effect instead of jump */
+}
+
+.tag-pill.active {
+    background-color: #eebb30; /* Gold */
+    color: #2b113e; /* Dark Purple Text */
+    border-color: #eebb30;
+    box-shadow: 0 4px 15px rgba(238, 187, 48, 0.3);
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 968px) {
+    .edu-trending-strip {
+        padding: 20px 5%; 
+    }
+    .trending-container {
+        flex-direction: column; 
+        align-items: flex-start;
+        gap: 15px;
+    }
+    .marquee-wrapper {
+        width: 100%;
+    }
+}
+
+
+/* --- Timeline Section Setup --- */
+.edu-timeline-section {
+    width: 100%;
+    padding: 80px 8%;
+    background-color: #170724; /* Very deep purple to blend smoothly */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ffffff;
+}
+
+.timeline-container {
+    max-width: 900px; /* Keep it narrow for better reading focus */
+    margin: 0 auto;
+}
+
+.timeline-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.timeline-header h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.timeline-header p {
+    color: #d1c4e9;
+    font-size: 1.1rem;
+}
+
+/* --- Timeline Core Layout --- */
+.timeline {
+    position: relative;
+}
+
+/* The Vertical Line */
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 150px; /* Distance from left */
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: rgba(238, 187, 48, 0.2); /* Faded Gold line */
+}
+
+/* Individual Post Item */
+.timeline-item {
+    display: flex;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+/* Date on the Left */
+.timeline-date {
+    width: 130px;
+    text-align: right;
+    padding-right: 30px;
+    color: #eebb30; /* Gold */
+    font-weight: 700;
+    font-size: 1rem;
+    padding-top: 5px; /* Aligns visually with the title */
+}
+
+/* The Glowing Dot */
+.timeline-dot {
+    position: absolute;
+    left: 144px; /* Perfectly centered on the line */
+    top: 6px;
+    width: 14px;
+    height: 14px;
+    background-color: #eebb30;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(238, 187, 48, 0.6), 0 0 0 4px #170724; /* Creates a cutout effect */
+    z-index: 2;
+    transition: transform 0.3s ease;
+}
+
+/* Content Card on the Right */
+.timeline-content {
+    flex: 1;
+    padding-left: 50px;
+}
+
+.timeline-content h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 1.3;
+    transition: color 0.3s ease;
+}
+
+.timeline-content p {
+    color: #bfaedc; /* Soft purple-grey */
+    line-height: 1.6;
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+/* Small Category Tag above Title */
+.timeline-category {
+    display: inline-block;
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 3px 10px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+/* Read More Link */
+.read-more {
+    display: inline-flex;
+    align-items: center;
+    color: #eebb30;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.read-more .arrow {
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+}
+
+/* Hover Effects */
+.timeline-item:hover .timeline-dot {
+    transform: scale(1.3);
+}
+
+.timeline-item:hover .timeline-content h3 {
+    color: #eebb30;
+}
+
+.timeline-item:hover .read-more .arrow {
+    transform: translateX(5px);
+}
+
+/* --- Scroll Animations --- */
+.edu-animate {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.edu-animate.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.delay-1 { transition-delay: 0.1s; }
+.delay-2 { transition-delay: 0.2s; }
+.delay-3 { transition-delay: 0.3s; }
+
+/* --- Mobile Responsiveness (Crucial for Timeline) --- */
+@media (max-width: 768px) {
+    .edu-timeline-section {
+        padding: 60px 5%;
+    }
+    
+    /* Shift the line to the far left */
+    .timeline::before {
+        left: 20px;
+    }
+    
+    .timeline-item {
+        flex-direction: column; /* Stacks date and content */
+        margin-bottom: 40px;
+    }
+    
+    /* Move dot to the new line position */
+    .timeline-dot {
+        left: 14px;
+        top: 0;
+    }
+    
+    /* Date moves to top, aligned left */
+    .timeline-date {
+        width: 100%;
+        text-align: left;
+        padding-left: 45px;
+        padding-right: 0;
+        margin-bottom: 10px;
+        padding-top: 0;
+    }
+    
+    /* Content shifts to align with the new date position */
+    .timeline-content {
+        padding-left: 45px;
+    }
+    
+    .timeline-header h2 {
+        font-size: 2rem;
+    }
+}
+
+
+/* --- Author Slider Section Setup --- */
+.edu-author-slider-section {
+    width: 100%;
+    padding: 80px 8%;
+    background-color: #230f35; /* Deep Purple */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ffffff;
+    overflow: hidden; /* Important to hide slides outside the view */
+}
+
+.slider-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.slider-header h2 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.slider-header p {
+    color: #eebb30; /* Gold */
+    font-size: 1.1rem;
+}
+
+/* --- Slider Core Layout --- */
+.slider-wrapper {
+    position: relative;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.slider-track {
+    display: flex;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1); /* Smooth sliding effect */
+    width: 100%;
+}
+
+.slide {
+    min-width: 100%; /* Each slide takes up full width of wrapper */
+    padding: 10px; /* Prevents shadow clipping */
+    box-sizing: border-box;
+}
+
+/* --- Reusing the Card Layout from before --- */
+.author-container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    background: rgba(255, 255, 255, 0.04);
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid rgba(238, 187, 48, 0.15);
+}
+
+.author-profile {
+    flex: 1.2;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.author-image-wrapper {
+    flex-shrink: 0;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    padding: 5px;
+    border: 2px dashed #eebb30;
+}
+
+.author-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.author-info h3 {
+    font-size: 1.6rem;
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+
+.expertise-tag {
+    display: inline-block;
+    color: #eebb30;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.author-bio {
+    color: #d1c4e9;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.author-articles {
+    flex: 1;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 25px;
+    border-radius: 12px;
+    border-left: 4px solid #eebb30;
+}
+
+.author-articles h4 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.article-list { list-style: none; padding: 0; margin: 0; }
+.article-list li { margin-bottom: 12px; border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding-bottom: 12px; }
+.article-list li:last-child { margin-bottom: 0; border-bottom: none; padding-bottom: 0; }
+
+.article-list a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #bfaedc;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.article-list a .arrow { color: #eebb30; opacity: 0; transform: translateX(-10px); transition: all 0.3s ease; }
+.article-list a:hover { color: #eebb30; }
+.article-list a:hover .arrow { opacity: 1; transform: translateX(0); }
+
+/* --- Slider Navigation Buttons (Arrows) --- */
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #eebb30;
+    color: #230f35;
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider-btn:hover {
+    background-color: #ffffff;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.prev-btn { left: -20px; }
+.next-btn { right: -20px; }
+
+/* --- Slider Dots --- */
+.slider-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dot.active {
+    background-color: #eebb30; /* Gold active dot */
+    transform: scale(1.3);
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 968px) {
+    .author-container {
+        flex-direction: column;
+        padding: 30px 20px;
+        gap: 30px;
+    }
+    
+    .author-profile {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    
+    .author-articles {
+        width: 100%;
+    }
+
+    /* Move buttons inside on mobile so they don't hide */
+    .prev-btn { left: 0px; width: 35px; height: 35px; }
+    .next-btn { right: 0px; width: 35px; height: 35px; }
+}
+
+
+/* --- Reading Preview Section Setup --- */
+.edu-reading-preview {
+    width: 100%;
+    padding: 100px 8%;
+    background-color: #170724; /* Deep, immersive dark purple */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ffffff;
+}
+
+.preview-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.preview-header h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.preview-header p {
+    color: #d1c4e9;
+    font-size: 1.15rem;
+}
+
+/* --- Split Container --- */
+.preview-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 60px;
+    align-items: flex-start; /* Keeps sticky working correctly */
+}
+
+/* --- Left Side: Text Column --- */
+.preview-text-col {
+    flex: 1.2;
+    position: relative;
+}
+
+.preview-tag {
+    display: inline-block;
+    background-color: rgba(238, 187, 48, 0.15);
+    color: #eebb30;
+    padding: 6px 14px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(238, 187, 48, 0.4);
+}
+
+.preview-title {
+    font-size: 2.2rem;
+    font-weight: 800;
+    line-height: 1.3;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.read-meta {
+    font-size: 0.95rem;
+    color: #a89bbd;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.read-meta .author-name {
+    color: #eebb30;
+    font-weight: 600;
+}
+
+/* The actual text */
+.article-content {
+    position: relative;
+}
+
+.article-content p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #e0d7f0; /* Brightened for better readability */
+    margin-bottom: 25px;
+}
+
+/* Drop Cap Style */
+.article-content p:first-of-type::first-letter {
+    font-size: 3.5rem;
+    float: left;
+    color: #eebb30;
+    line-height: 0.8;
+    margin-right: 10px;
+    margin-top: 5px;
+    font-weight: 800;
+}
+
+/* Fade out effect (Subtle) */
+.text-fade-out {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    background: linear-gradient(to bottom, rgba(23, 7, 36, 0) 0%, rgba(23, 7, 36, 0.85) 100%);
+    pointer-events: none;
+}
+
+/* Button */
+.continue-reading-btn {
+    margin-top: 20px;
+    width: 100%;
+    justify-content: center;
+    background-color: #eebb30;
+    color: #2b113e;
+    padding: 16px;
+    border-radius: 6px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.continue-reading-btn:hover {
+    background-color: #ffd754;
+    transform: translateY(-2px);
+}
+
+/* --- Right Side: Sticky Media --- */
+.preview-media-col {
+    flex: 1;
+}
+
+.sticky-media {
+    position: sticky;
+    top: 100px;
+}
+
+.media-wrapper {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.media-wrapper img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.media-wrapper:hover img {
+    transform: scale(1.05);
+}
+
+.play-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(238, 187, 48, 0.9);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #170724;
+    cursor: pointer;
+}
+
+/* --- Scroll Animations --- */
+.edu-animate {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.edu-animate.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 968px) {
+    .preview-container {
+        flex-direction: column-reverse;
+        gap: 40px;
+    }
+    .sticky-media {
+        position: relative;
+        top: 0;
+    }
+    .text-fade-out {
+        height: 80px;
+        background: linear-gradient(to bottom, rgba(23, 7, 36, 0) 0%, rgba(23, 7, 36, 0.7) 100%);
+    }
+}
+
+/* --- Immersive Story Styles --- */
+.story-wrapper { position: relative; }
+
+/* Progress Bar */
+.progress-container {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 6px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    z-index: 999;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 0%;
+    background: linear-gradient(180deg, #b388ff, #ffd700);
+    transition: height 0.1s ease-out; /* Changed to 0.1s for smoother progress */
+    box-shadow: 0 0 15px rgba(179, 136, 255, 0.4);
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 80px 20px;
+    line-height: 1.9;
+}
+
+/* Typewriter Title Fix */
+.title {
+    font-size: 42px;
+    font-weight: 700;
+    background: linear-gradient(90deg, #b388ff, #ffd700);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-right: 3px solid #ffd700;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    animation: typing 3s steps(30, end) forwards, blink 0.8s infinite;
+}
+
+/* Paragraph Animations */
+.container p {
+    margin: 30px 0;
+    font-size: 18px;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+    color: #eaeaea;
+}
+
+.container p.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hover Effect */
+.container p:hover {
+    color: #ffd700;
+    text-shadow: 0 0 12px rgba(255, 215, 0, 0.35);
+}
+
+.quote {
+    padding: 20px 22px;
+    border-left: 4px solid #ffd700;
+    background: linear-gradient(135deg, rgba(179, 136, 255, 0.12), rgba(0, 0, 0, 0.2));
+    border-radius: 10px;
+    font-style: italic;
+    color: #f3f3f3;
+    margin: 40px 0;
+}
+
+@keyframes typing { from { width: 0 } to { width: 100% } }
+@keyframes blink { 50% { border-color: transparent } }
+
+@media(max-width: 768px) {
+    .title { font-size: 28px; white-space: normal; animation: none; border: none; } /* Mobile fix */
+    .container p { font-size: 16px; }
+}

@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./asset/logo_Favicon.webp">
+    <title>Stackly - Course</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="course.css">
+</head>
+
+<body>
+
+    <div id="preloader">
+        <div class="loader-content">
+            <i class="fas fa-graduation-cap loader-icon"></i>
+            <h2>Stackly Education</h2>
+            <div class="spinner"></div>
+        </div>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+
+            <div class="nav-logo">
+                <a href="index.html">
+                    <img src="./asset/yellow_logo.webp" alt="logo" class="logo">
+                </a>
+
+            </div>
+
+            <ul class="nav-menu">
+                <li><a href="index.html" class="menu-link" data-page="Home"><i class="fas fa-home"></i> Home</a>
+                </li>
+                <li><a href="about.html" class="menu-link" data-page="About"><i class="fas fa-info-circle"></i>
+                        About</a></li>
+                <li><a href="course.html" class="menu-link active" data-page="Course"><i class="fas fa-laptop-code"></i>
+                        Course</a></li>
+                <li><a href="blog.html" class="menu-link" data-page="Blog"><i class="fas fa-newspaper"></i> Blog</a></li>
+                <li><a href="contact.html" class="menu-link" data-page="Contact"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button class="btn-login" onclick="window.location.href='login.html'">Login</button>
+                <button class="btn-get-started" onclick="window.location.href='createaccount.html'">Get Started</button>
+            </div>
+
+            <button class="hamburger" id="hamburger-btn" aria-label="Toggle Menu">
+                <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+            </button>
+        </div>
+
+        <div class="mobile-dropdown" id="mobile-menu">
+            <ul class="mobile-nav-links">
+                <li><a href="index.html" class="mobile-link" data-page="Home"><i class="fas fa-home"></i>Home</a></li>
+                <li><a href="about.html" class="mobile-link" data-page="About"><i class="fas fa-info-circle"></i>
+                        About</a></li>
+                <li><a href="course.html" class="mobile-link active" data-page="Course"><i
+                            class="fas fa-laptop-code"></i> Course</a>
+                </li>
+                <li><a href="blog.html" class="mobile-link" data-page="Blog"><i class="fas fa-newspaper"></i> Blog</a></li>
+                <li><a href="contact.html" class="mobile-link" data-page="Contact"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
+            <div class="mobile-btn-wrapper">
+                <button class="btn-login mobile-login-btn" onclick="window.location.href='login.html'">Login</button>
+                <button class="btn-get-started mobile-get-btn" onclick="window.location.href='createaccount.html'">Get
+                    Started</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ====================================
+   COURSE PAGE HERO BANNER
+==================================== -->
+<section class="course-hero-section">
+    <!-- Background Gradient Overlay -->
+    <div class="course-hero-overlay"></div>
+
+    <div class="course-hero-content">
+        
+        <!-- Exact Breadcrumbs Box Design (Home » Courses) -->
+        <div class="breadcrumbs-box" data-aos="fade-down" data-aos-duration="1000">
+            <a href="index.html">Home</a> 
+            <span class="separator">»</span> 
+            <span class="current-page">Courses</span>
+        </div>
+
+        <!-- Main Title -->
+        <h1 class="course-hero-title" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="100">
+            Master Skills with <br><span class="text-gold">Industry-Level Courses</span>
+        </h1>
+        
+        <p class="course-hero-subtitle" data-aos="fade-up" data-aos-delay="200">
+            Upgrade your career with expert-led tutorials, hands-on projects, and real-world applications. 
+            Whether you are a beginner or an advanced learner, we have the perfect path for your digital future.
+        </p>
+
+        <!-- Search Bar -->
+        <div class="course-search-wrapper" data-aos="fade-up" data-aos-delay="300">
+            <input type="text" class="course-search-input" placeholder="What do you want to learn? (e.g. React, Python)">
+            <button class="course-search-btn"><i class="fas fa-search"></i> Search</button>
+        </div>
+
+        <!-- Course Stats -->
+        <div class="hero-course-stats" data-aos="fade-up" data-aos-delay="400">
+            <div class="stat-item"><i class="fas fa-video text-gold"></i> 50+ Premium Courses</div>
+            <div class="stat-item"><i class="fas fa-users text-gold"></i> 10,000+ Students</div>
+            <div class="stat-item"><i class="fas fa-certificate text-gold"></i> Certified Experts</div>
+        </div>
+
+    </div>
+</section>
+
+<!-- ====================================
+   COURSE PATHWAY (TIMELINE DESIGN)
+==================================== -->
+<section class="story-section">
+    <div class="story-container">
+        
+        <!-- Header -->
+        <div class="story-header" data-aos="fade-up" data-aos-duration="1000">
+            <span class="section-badge badge-outline">EXPLORE COURSES</span>
+            <h2 class="section-title">Choose Your <span class="text-gold">Learning Path</span></h2>
+        </div>
+
+        <!-- Timeline Wrapper -->
+        <div class="story-wrapper">
+            <!-- Center Gold Line -->
+            <div class="story-center-line"></div>
+
+            <!-- Category 1: Web Development (Right Side) -->
+            <div class="story-item right-side" data-aos="fade-up" data-aos-delay="100">
+                <div class="story-icon">
+                    <i class="fas fa-laptop-code"></i>
+                </div>
+                <div class="story-content">
+                    <h3 class="story-year">01</h3>
+                    <h4 class="story-title">Web Development</h4>
+                    <p>Master modern front-end technologies. Learn to build responsive, multi-page applications and implement advanced UI animations for seamless digital experiences.</p>
+                </div>
+            </div>
+
+            <!-- Category 2: UI/UX Design (Left Side) -->
+            <div class="story-item left-side" data-aos="fade-up" data-aos-delay="200">
+                <div class="story-icon">
+                    <i class="fas fa-paint-brush"></i>
+                </div>
+                <div class="story-content">
+                    <h3 class="story-year">02</h3>
+                    <h4 class="story-title">UI/UX Design</h4>
+                    <p>Craft beautiful, user-centered designs. Focus on intuitive layouts, wireframing, and creating engaging digital interfaces that users love.</p>
+                </div>
+            </div>
+
+            <!-- Category 3: Data Science (Right Side) -->
+            <div class="story-item right-side" data-aos="fade-up" data-aos-delay="300">
+                <div class="story-icon">
+                    <i class="fas fa-chart-pie"></i>
+                </div>
+                <div class="story-content">
+                    <h3 class="story-year">03</h3>
+                    <h4 class="story-title">Data Science</h4>
+                    <p>Analyze complex datasets and extract meaningful insights. Master data visualization, statistical modeling, and advanced analytical tools.</p>
+                </div>
+            </div>
+
+            <!-- Category 4: AI / ML (Left Side) -->
+            <div class="story-item left-side" data-aos="fade-up" data-aos-delay="400">
+                <div class="story-icon">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <div class="story-content">
+                    <h3 class="story-year">04</h3>
+                    <h4 class="story-title">AI / ML</h4>
+                    <p>Dive into the future of technology. Explore natural language processing, sentiment analysis, and develop smart machine learning models using Python.</p>
+                </div>
+            </div>
+
+            <!-- Category 5: Marketing (Right Side) -->
+            <div class="story-item right-side" data-aos="fade-up" data-aos-delay="500">
+                <div class="story-icon">
+                    <i class="fas fa-bullhorn"></i>
+                </div>
+                <div class="story-content">
+                    <h3 class="story-year">05</h3>
+                    <h4 class="story-title">Marketing</h4>
+                    <p>Learn data-driven digital marketing strategies to grow brands, optimize conversion rates, and reach wider global audiences.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ====================================
+   FEATURED COURSE SPOTLIGHT
+==================================== -->
+<section class="spotlight-section">
+    <div class="spotlight-container">
+        
+        <!-- Left Side: Featured Image with Zoom Effect -->
+        <div class="spotlight-image-wrapper" data-aos="fade-right" data-aos-duration="1000">
+            <!-- Inner wrapper to contain the zoom -->
+            <div class="spotlight-img-inner">
+                <img src="./asset/sec6.webp" alt="Advanced React Course" class="spotlight-img">
+            </div>
+            
+            <div class="spotlight-tag"><i class="fas fa-star"></i> Bestseller</div>
+            
+            <!-- Decorative Glow Behind Image -->
+            <div class="image-glow"></div>
+        </div>
+
+        <!-- Right Side: Course Content -->
+        <div class="spotlight-content" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+            <span class="section-badge badge-outline">FEATURED COURSE</span>
+            <h2 class="spotlight-title">Advanced React & <br><span class="text-gold">UI Animations</span> Masterclass</h2>
+            
+            <p class="spotlight-desc">
+                Take your front-end development skills to the next level. Learn to build responsive, multi-page applications, master state management, and create seamless digital experiences from scratch.
+            </p>
+            
+            <!-- Course Meta Info (Duration, Level) -->
+            <div class="spotlight-meta">
+                <div class="meta-item">
+                    <i class="fas fa-clock text-gold"></i>
+                    <span>12 Weeks</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-signal text-gold"></i>
+                    <span>Advanced Level</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-certificate text-gold"></i>
+                    <span>Certified</span>
+                </div>
+            </div>
+            
+            <!-- Enroll Button -->
+            <a href="#" class="spotlight-btn">
+                Enroll Now <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ====================================
+   LEARNING PATH FLOW (ROADMAP DIAGRAM)
+==================================== -->
+<section class="learning-path-section">
+    <div class="path-header" data-aos="fade-up" data-aos-duration="1000">
+        <span class="section-badge badge-outline">YOUR JOURNEY</span>
+        <h2 class="section-title">Step-by-Step <span class="text-gold">Learning Path</span></h2>
+        <p class="path-subtitle">Follow our structured roadmap from basics to becoming a certified professional.</p>
+    </div>
+
+    <div class="path-diagram-container">
+        <!-- The Center Dashed Line -->
+        <div class="diagram-line"></div>
+
+        <!-- Step 1: Basics (Top) -->
+        <div class="diagram-step step-up" data-aos="fade-up" data-aos-delay="100">
+            <div class="step-circle">01</div>
+            <div class="step-box">
+                <i class="fas fa-layer-group step-icon"></i>
+                <h4 class="step-title">Basics</h4>
+                <p>Master the fundamentals. Learn core logic, syntax, and basic architecture.</p>
+            </div>
+        </div>
+
+        <!-- Step 2: Intermediate (Bottom) -->
+        <div class="diagram-step step-down" data-aos="fade-down" data-aos-delay="200">
+            <div class="step-circle">02</div>
+            <div class="step-box">
+                <i class="fas fa-code-branch step-icon"></i>
+                <h4 class="step-title">Intermediate</h4>
+                <p>Dive into advanced concepts, state management, and modern component structures.</p>
+            </div>
+        </div>
+
+        <!-- Step 3: Projects (Top) -->
+        <div class="diagram-step step-up" data-aos="fade-up" data-aos-delay="300">
+            <div class="step-circle">03</div>
+            <div class="step-box">
+                <i class="fas fa-laptop-code step-icon"></i>
+                <h4 class="step-title">Projects</h4>
+                <p>Build responsive, real-world applications and implement complex API integrations.</p>
+            </div>
+        </div>
+
+        <!-- Step 4: Certification (Bottom) -->
+        <div class="diagram-step step-down" data-aos="fade-down" data-aos-delay="400">
+            <div class="step-circle">04</div>
+            <div class="step-box">
+                <i class="fas fa-award step-icon"></i>
+                <h4 class="step-title">Certification</h4>
+                <p>Complete assessments and earn a recognized certificate to kickstart your career.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ====================================
+   ULTRA PREMIUM: LIVE LEARNING EXPERIENCE (VIDEO)
+==================================== -->
+<section class="live-experience-section">
+    
+    <!-- Animated Background Glow / Particles -->
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
+    <div class="parallax-overlay"></div>
+
+    <div class="live-container">
+        
+        <!-- Left Side: Cinematic Text -->
+        <div class="live-text-content" data-aos="fade-right" data-aos-duration="1200">
+            <span class="section-badge badge-outline">LIVE PREVIEW</span>
+            
+            <h2 class="live-title">Experience <span class="text-gold">Real Classroom</span> Environment</h2>
+            
+            <p class="live-desc">
+                Watch how you will learn daily. Dive into live demo clips, explore our cutting-edge UI, and get a feel for our interactive sessions before you even join.
+            </p>
+            
+            <!-- CTAs -->
+            <div class="live-ctas">
+                <a href="#" class="live-btn-primary">
+                    <i class="far fa-eye"></i> Full Preview
+                </a>
+                <a href="#" class="live-btn-secondary">
+                    <i class="far fa-calendar-alt"></i> Join Live Class
+                </a>
+            </div>
+        </div>
+
+        <!-- Right Side: Real Video Window (Neon Border) -->
+        <div class="live-video-wrapper" data-aos="zoom-in-left" data-aos-duration="1200" data-aos-delay="200">
+            <div class="video-neon-border">
+                
+                <!-- 
+                  REAL VIDEO ADDED HERE
+                  autoplay: Auto starts, loop: repeats, muted: required for autoplay, playsinline: mandatory for mobile
+                -->
+                <video autoplay loop muted playsinline class="live-video-player">
+                    <!-- Replace with your actual video file path (e.g., ./asset/class-demo.mp4) -->
+                    <source src="./asset/video1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+
+                <!-- Cinematic Gradient Overlay over video -->
+                <div class="video-overlay-gradient"></div>
+
+                <!-- Live Tag UI Detail -->
+                <div class="live-status-tag">
+                    <span class="live-dot"></span> LIVE CLASS UI
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ====================================
+   PREMIUM SIMULATION LAB (CODING STUDIO)
+==================================== -->
+<section class="simulation-section">
+    <div class="simulation-container">
+        
+        <!-- Left Side: Live Coding Workspace -->
+        <div class="simulation-workspace" data-aos="fade-right" data-aos-duration="1200">
+            
+            <div class="workspace-window">
+                <!-- Mac-Style Window Header & Tabs -->
+                <div class="window-header">
+                    <div class="window-dots">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                    </div>
+                    <div class="window-tabs">
+                        <div class="tab active"><i class="fas fa-code"></i> App.js</div>
+                        <div class="tab"><i class="fas fa-desktop"></i> Preview</div>
+                        <div class="tab"><i class="fas fa-paint-brush"></i> Design</div>
+                    </div>
+                </div>
+                
+                <!-- Window Body with Code Typing Animation -->
+                <div class="window-body">
+                    <div class="code-editor">
+                        <div class="code-line"><span class="c-purple">const</span> <span class="c-blue">project</span> = {</div>
+                        <div class="code-line indent">title: <span class="c-yellow">'E-commerce App'</span>,</div>
+                        <div class="code-line indent">stack: [<span class="c-yellow">'React'</span>, <span class="c-yellow">'Node.js'</span>],</div>
+                        <div class="code-line indent">status: <span class="c-yellow">'Building UI...'</span></div>
+                        <div class="code-line">};</div>
+                        <div class="code-line mt-2"><span class="c-purple">function</span> <span class="c-green">launch</span>() {</div>
+                        <!-- Typing Effect Line -->
+                        <div class="code-line indent typing-wrapper">
+                            <span class="typing-text">project.<span class="c-blue">deploy</span>();</span><span class="cursor">|</span>
+                        </div>
+                        <div class="code-line">}</div>
+                    </div>
+                    
+                    <!-- Decorative Background Neon Glow -->
+                    <div class="workspace-glow"></div>
+                </div>
+            </div>
+            
+        </div>
+
+        <!-- Right Side: Story Content & Project List -->
+        <div class="simulation-content">
+            <span class="section-badge badge-outline" data-aos="fade-left">PROJECT SIMULATION</span>
+            
+            <h2 class="simulation-title" data-aos="fade-left" data-aos-delay="100">
+                Build <span class="text-gold">Real-World</span> Projects Like a Pro
+            </h2>
+            
+            <p class="simulation-desc" data-aos="fade-left" data-aos-delay="200">
+                Step into a real coding studio environment. No more boring theory—get your hands dirty by building industry-standard applications that you can proudly showcase.
+            </p>
+            
+            <!-- List of Projects (Fixed Class Clash) -->
+            <div class="lab-project-list">
+                
+                <div class="lab-project-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="lab-project-header">
+                        <h4>Full-Stack E-commerce</h4>
+                        <div class="lab-project-icon"><i class="fas fa-shopping-bag"></i></div>
+                    </div>
+                    <p>Complete with cart logic, payment gateways, and secure user authentication.</p>
+                </div>
+
+                <div class="lab-project-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="lab-project-header">
+                        <h4>Admin Dashboard UI</h4>
+                        <div class="lab-project-icon"><i class="fas fa-chart-pie"></i></div>
+                    </div>
+                    <p>Master data visualization, interactive charts, and responsive grid layouts.</p>
+                </div>
+
+                <div class="lab-project-item" data-aos="fade-up" data-aos-delay="500">
+                    <div class="lab-project-header">
+                        <h4>Interactive Portfolio</h4>
+                        <div class="lab-project-icon"><i class="fas fa-laptop-code"></i></div>
+                    </div>
+                    <p>Implement advanced animations, 3D elements, and modern scroll reveals.</p>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="cta-strip-section">
+    <div class="cta-strip-container" data-aos="zoom-in" data-aos-duration="1000">
+        
+        <div class="cta-sweep-glow"></div>
+
+        <div class="cta-content">
+            <span class="cta-badge">🔥 LIMITED TIME OFFER</span>
+            <h2 class="cta-title">Start Your <span class="text-gold">Learning Journey</span> Today</h2>
+            <p class="cta-subtitle">Join 50,000+ students and upgrade your skills before the offer ends!</p>
+        </div>
+
+        <div class="cta-timer">
+            <div class="time-box">
+                <span class="time-num" id="days">02</span>
+                <span class="time-label">Days</span>
+            </div>
+            <span class="time-colon">:</span>
+            <div class="time-box">
+                <span class="time-num" id="hours">14</span>
+                <span class="time-label">Hours</span>
+            </div>
+            <span class="time-colon">:</span>
+            <div class="time-box">
+                <span class="time-num" id="mins">45</span>
+                <span class="time-label">Mins</span>
+            </div>
+            <span class="time-colon">:</span>
+            <div class="time-box">
+                <span class="time-num" id="secs">30</span>
+                <span class="time-label">Secs</span>
+            </div>
+        </div>
+
+        <div class="cta-action">
+            <a href="#" class="cta-enroll-btn">
+                Enroll Now <i class="fas fa-rocket"></i>
+            </a>
+        </div>
+
+    </div>
+</section>
+
+    <footer class="footer-section">
+        <div class="footer-container fade-up">
+
+            <div class="footer-grid">
+
+                <div class="footer-col brand-col">
+                    <div class="nav-logo">
+                        <a href="index.html">
+                            <img src="./asset/yellow_logo.webp" alt="logo" class="logo">
+                        </a>
+                    </div>
+                    <p>"Your gateway to advanced learning. Master new skills with industry experts, interactive live
+                        sessions, and a next-gen educational platform."</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-google"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col links-col">
+                    <h3>Platform</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="#">course</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col support-col">
+                    <h3>Support</h3>
+                    <ul>
+                        <li class="support-item"><i class="far fa-envelope"></i> support@edusmart.learning</li>
+                        <li class="support-item"><i class="fas fa-map-marker-alt"></i> Salem City, Tamil Nadu</li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Newsletter -->
+                <div class="footer-col newsletter-col">
+                    <h3>Newsletter</h3>
+                    <p>Get exclusive course drops & tournament alerts.</p>
+                    <form class="newsletter-form" id="newsletter-form" novalidate>
+                        <div class="newsletter-input-wrap">
+                            <input type="email" id="newsletter-email" placeholder="Enter student email">
+                            <button type="submit">JOIN</button>
+                        </div>
+                        <span id="email-msg" class="form-msg"></span>
+                    </form>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 EduSmart Learning. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Terms & Conditions</a> | <a href="#">Privacy Policy</a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <script src="script.js"></script>
+    <script>
+        // Set timer to 2 days from now for demo purposes
+    let countDownDate = new Date().getTime() + (2 * 24 * 60 * 60 * 1000) + (14 * 60 * 60 * 1000) + (45 * 60 * 1000);
+
+    let x = setInterval(function() {
+        let now = new Date().getTime();
+        let distance = countDownDate - now;
+
+        let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Add zero padding
+        document.getElementById("days").innerHTML = days < 10 ? "0" + days : days;
+        document.getElementById("hours").innerHTML = hours < 10 ? "0" + hours : hours;
+        document.getElementById("mins").innerHTML = minutes < 10 ? "0" + minutes : minutes;
+        document.getElementById("secs").innerHTML = seconds < 10 ? "0" + seconds : seconds;
+
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("days").innerHTML = "00";
+            document.getElementById("hours").innerHTML = "00";
+            document.getElementById("mins").innerHTML = "00";
+            document.getElementById("secs").innerHTML = "00";
+        }
+    }, 1000);
+    </script>
+
+</body>
+
+</html>

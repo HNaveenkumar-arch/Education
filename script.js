@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- 3. ACTIVE LINK MANAGEMENT ---
     menuLinks.forEach(link => {
         link.addEventListener('click', (e) => {
-            e.preventDefault();
+            // e.preventDefault();
             const targetPageName = link.getAttribute('data-page');
 
             menuLinks.forEach(item => item.classList.remove('active'));

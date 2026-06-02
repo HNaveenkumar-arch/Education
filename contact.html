@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./asset/logo_Favicon.webp">
+    <title>Stackly - Contact</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contact.css">
+</head>
+
+<body>
+
+    <div id="preloader">
+        <div class="loader-content">
+            <i class="fas fa-graduation-cap loader-icon"></i>
+            <h2>Stackly Education</h2>
+            <div class="spinner"></div>
+        </div>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+
+            <div class="nav-logo">
+                <a href="index.html">
+                    <img src="./asset/yellow_logo.webp" alt="logo" class="logo">
+                </a>
+
+            </div>
+
+            <ul class="nav-menu">
+                <li><a href="index.html" class="menu-link" data-page="Home"><i class="fas fa-home"></i> Home</a>
+                </li>
+                <li><a href="about.html" class="menu-link" data-page="About"><i class="fas fa-info-circle"></i>
+                        About</a></li>
+                <li><a href="course.html" class="menu-link" data-page="Course"><i class="fas fa-laptop-code"></i>
+                        Course</a></li>
+                <li><a href="blog.html" class="menu-link" data-page="Blog"><i class="fas fa-newspaper"></i> Blog</a></li>
+                <li><a href="contact.html" class="menu-link active" data-page="Contact"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button class="btn-login" onclick="window.location.href='login.html'">Login</button>
+                <button class="btn-get-started" onclick="window.location.href='createaccount.html'">Get Started</button>
+            </div>
+
+            <button class="hamburger" id="hamburger-btn" aria-label="Toggle Menu">
+                <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+            </button>
+        </div>
+
+        <div class="mobile-dropdown" id="mobile-menu">
+            <ul class="mobile-nav-links">
+                <li><a href="index.html" class="mobile-link" data-page="Home"><i class="fas fa-home"></i>Home</a></li>
+                <li><a href="about.html" class="mobile-link" data-page="About"><i class="fas fa-info-circle"></i>
+                        About</a></li>
+                <li><a href="course.html" class="mobile-link" data-page="Course"><i
+                            class="fas fa-laptop-code"></i> Course</a>
+                </li>
+                <li><a href="blog.html" class="mobile-link" data-page="Blog"><i class="fas fa-newspaper"></i> Blog</a></li>
+                <li><a href="contact.html" class="mobile-link active" data-page="Contact"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
+            <div class="mobile-btn-wrapper">
+                <button class="btn-login mobile-login-btn" onclick="window.location.href='login.html'">Login</button>
+                <button class="btn-get-started mobile-get-btn" onclick="window.location.href='createaccount.html'">Get
+                    Started</button>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+    <footer class="footer-section">
+        <div class="footer-container fade-up">
+
+            <div class="footer-grid">
+
+                <div class="footer-col brand-col">
+                    <div class="nav-logo">
+                        <a href="index.html">
+                            <img src="./asset/yellow_logo.webp" alt="logo" class="logo">
+                        </a>
+                    </div>
+                    <p>"Your gateway to advanced learning. Master new skills with industry experts, interactive live
+                        sessions, and a next-gen educational platform."</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-google"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col links-col">
+                    <h3>Platform</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="#">course</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col support-col">
+                    <h3>Support</h3>
+                    <ul>
+                        <li class="support-item"><i class="far fa-envelope"></i> support@edusmart.learning</li>
+                        <li class="support-item"><i class="fas fa-map-marker-alt"></i> Salem City, Tamil Nadu</li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Newsletter -->
+                <div class="footer-col newsletter-col">
+                    <h3>Newsletter</h3>
+                    <p>Get exclusive course drops & tournament alerts.</p>
+                    <form class="newsletter-form" id="newsletter-form" novalidate>
+                        <div class="newsletter-input-wrap">
+                            <input type="email" id="newsletter-email" placeholder="Enter student email">
+                            <button type="submit">JOIN</button>
+                        </div>
+                        <span id="email-msg" class="form-msg"></span>
+                    </form>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 EduSmart Learning. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Terms & Conditions</a> | <a href="#">Privacy Policy</a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

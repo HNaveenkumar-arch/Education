@@ -375,13 +375,10 @@ body.no-scroll {
   overflow: hidden;
 }
 
-/* ==========================================================================
-   FOOTER SECTION (DARK PURPLE & GOLD)
-   ========================================================================== */
 .footer-section {
-  background: #0a0716; /* Darkest purple for footer */
+  background: #2e1065;
   padding: 80px 24px 30px;
-  color: #94a3b8;
+  color: #ffffff;
   border-top: 1px solid rgba(251, 191, 36, 0.1);
 }
 
@@ -390,7 +387,6 @@ body.no-scroll {
   margin: 0 auto;
 }
 
-/* Footer Grid Layout */
 .footer-grid {
   display: grid;
   grid-template-columns: 2fr 1fr 1.2fr 1.8fr;
@@ -398,7 +394,6 @@ body.no-scroll {
   margin-bottom: 60px;
 }
 
-/* 1. Brand Column */
 .footer-logo {
   display: flex;
   align-items: center;
@@ -434,16 +429,16 @@ body.no-scroll {
   color: #cbd5e1;
   font-size: 16px;
   text-decoration: none;
-  transition: 0.3s;
+  transition: all 0.3s ease;
 }
 
 .footer-social a:hover {
   border-color: #fbbf24;
   color: #fbbf24;
   background: rgba(251, 191, 36, 0.1);
+  transform: translateY(-7px);
 }
 
-/* Common Headings */
 .footer-col h3 {
   color: #ffffff;
   font-size: 18px;
@@ -451,7 +446,6 @@ body.no-scroll {
   margin-bottom: 25px;
 }
 
-/* 2. Platform Links */
 .links-col ul {
   list-style: none;
   padding: 0;

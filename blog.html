@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./asset/logo_Favicon.webp">
+    <title>Stackly - Blog</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="blog.css">
+</head>
+
+<body>
+
+    <div id="preloader">
+        <div class="loader-content">
+            <i class="fas fa-graduation-cap loader-icon"></i>
+            <h2>Stackly Education</h2>
+            <div class="spinner"></div>
+        </div>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+
+            <div class="nav-logo">
+                <a href="index.html">
+                    <img src="./asset/yellow_logo.webp" alt="logo" class="logo">
+                </a>
+
+            </div>
+
+            <ul class="nav-menu">
+                <li><a href="index.html" class="menu-link" data-page="Home"><i class="fas fa-home"></i> Home</a>
+                </li>
+                <li><a href="about.html" class="menu-link" data-page="About"><i class="fas fa-info-circle"></i>
+                        About</a></li>
+                <li><a href="course.html" class="menu-link" data-page="Course"><i class="fas fa-laptop-code"></i>
+                        Course</a></li>
+                <li><a href="blog.html" class="menu-link active" data-page="Blog"><i class="fas fa-newspaper"></i> Blog</a></li>
+                <li><a href="contact.html" class="menu-link" data-page="Contact"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button class="btn-login" onclick="window.location.href='login.html'">Login</button>
+                <button class="btn-get-started" onclick="window.location.href='createaccount.html'">Get Started</button>
+            </div>
+
+            <button class="hamburger" id="hamburger-btn" aria-label="Toggle Menu">
+                <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+            </button>
+        </div>
+
+        <div class="mobile-dropdown" id="mobile-menu">
+            <ul class="mobile-nav-links">
+                <li><a href="index.html" class="mobile-link" data-page="Home"><i class="fas fa-home"></i>Home</a></li>
+                <li><a href="about.html" class="mobile-link" data-page="About"><i class="fas fa-info-circle"></i>
+                        About</a></li>
+                <li><a href="course.html" class="mobile-link" data-page="Course"><i
+                            class="fas fa-laptop-code"></i> Course</a>
+                </li>
+                <li><a href="blog.html" class="mobile-link active" data-page="Blog"><i class="fas fa-newspaper"></i> Blog</a></li>
+                <li><a href="contact.html" class="mobile-link" data-page="Contact"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
+            <div class="mobile-btn-wrapper">
+                <button class="btn-login mobile-login-btn" onclick="window.location.href='login.html'">Login</button>
+                <button class="btn-get-started mobile-get-btn" onclick="window.location.href='createaccount.html'">Get
+                    Started</button>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Hero Blog Spotlight Section -->
+<section class="edu-hero-split">
+    
+    <div class="edu-container-split">
+        
+        <div class="edu-content-left">
+            
+            <div class="custom-breadcrumb edu-animate">
+                <a href="index.html" class="home-link">Home</a> 
+                <span class="arrow">»</span> 
+                <span class="current-page">Blog</span>
+            </div>
+
+            <h1 class="edu-heading edu-animate delay-1">
+                The Future of <span class="highlight-gold">Learning</span><br>in the Digital Age
+            </h1>
+            
+            <p class="edu-subtext edu-animate delay-2">
+                Explore our comprehensive guide on how modern technology and innovative teaching methods are reshaping higher education worldwide.
+            </p>
+
+            <button class="edu-btn edu-animate delay-3">
+                Read Featured Article <span class="play-icon">▶</span>
+            </button>
+
+        </div>
+
+        <div class="edu-image-right edu-animate delay-4">
+            <div class="image-zoom-wrapper">
+                <img src="./asset/sec5.webp" alt="Students learning digitally">
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="edu-trending-strip">
+    <div class="trending-container">
+        
+        <div class="trending-header edu-animate">
+            <span class="fire-icon">🔥</span>
+            <h2>Trending</h2>
+        </div>
+
+        <div class="marquee-wrapper edu-animate delay-1">
+            <div class="marquee-track">
+                
+                <div class="marquee-group">
+                    <button class="tag-pill active">All Topics</button>
+                    <button class="tag-pill">#WebDevelopment</button>
+                    <button class="tag-pill">#AI</button>
+                    <button class="tag-pill">#UIUX</button>
+                    <button class="tag-pill">#Tips</button>
+                    <button class="tag-pill">#Career</button>
+                    <button class="tag-pill">#Productivity</button>
+                </div>
+
+                <div class="marquee-group" aria-hidden="true">
+                    <button class="tag-pill active">All Topics</button>
+                    <button class="tag-pill">#WebDevelopment</button>
+                    <button class="tag-pill">#AI</button>
+                    <button class="tag-pill">#UIUX</button>
+                    <button class="tag-pill">#Tips</button>
+                    <button class="tag-pill">#Career</button>
+                    <button class="tag-pill">#Productivity</button>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const tagPills = document.querySelectorAll('.tag-pill');
+
+            tagPills.forEach(pill => {
+                pill.addEventListener('click', function() {
+                    const clickedText = this.innerText; // Get text of clicked pill
+
+                    // Remove 'active' from all, and add to BOTH copies of the clicked pill
+                    tagPills.forEach(p => {
+                        if (p.innerText === clickedText) {
+                            p.classList.add('active');
+                        } else {
+                            p.classList.remove('active');
+                        }
+                    });
+                    
+                    // Filter logic goes here
+                });
+            });
+        });
+    </script>
+</section>
+
+
+<!-- Latest Articles Timeline Section -->
+<section class="edu-timeline-section">
+    <div class="timeline-container">
+        
+        <!-- Section Header -->
+        <div class="timeline-header edu-animate">
+            <h2>Latest Articles 📚</h2>
+            <p>Catch up on the newest insights and stories in education.</p>
+        </div>
+
+        <!-- The Timeline -->
+        <div class="timeline">
+            
+            <!-- Timeline Item 1 -->
+            <div class="timeline-item edu-animate delay-1">
+                <div class="timeline-date">Jun 02, 2026</div>
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-category">Tech & AI</span>
+                    <h3>AI in Modern Classrooms: The New Tutor</h3>
+                    <p>Discover how artificial intelligence is acting as a personalized tutor for students globally, adapting to individual learning paces.</p>
+                    <a href="#" class="read-more">Read Story <span class="arrow">→</span></a>
+                </div>
+            </div>
+
+            <!-- Timeline Item 2 -->
+            <div class="timeline-item edu-animate delay-2">
+                <div class="timeline-date">May 28, 2026</div>
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-category">Career</span>
+                    <h3>The Top 5 Skills Employers Look For</h3>
+                    <p>Degrees are great, but practical skills pay the bills. We break down the top soft and hard skills hiring managers are demanding right now.</p>
+                    <a href="#" class="read-more">Read Story <span class="arrow">→</span></a>
+                </div>
+            </div>
+
+            <!-- Timeline Item 3 -->
+            <div class="timeline-item edu-animate delay-3">
+                <div class="timeline-date">May 20, 2026</div>
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-category">Tips</span>
+                    <h3>Mastering the Pomodoro Technique</h3>
+                    <p>Struggling with focus? Learn how dividing your study time into 25-minute intervals can drastically improve your memory retention.</p>
+                    <a href="#" class="read-more">Read Story <span class="arrow">→</span></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Scroll Animation Script -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const timelineElements = document.querySelectorAll('.edu-timeline-section .edu-animate');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.15 });
+
+            timelineElements.forEach(el => observer.observe(el));
+        });
+    </script>
+</section>
+
+
+<!-- Featured Authors Slider Section -->
+<section class="edu-author-slider-section">
+    
+    <div class="slider-header edu-animate">
+        <h2>Meet Our Top Authors 👨‍💻</h2>
+        <p>Learn from the industry's best minds.</p>
+    </div>
+
+    <div class="slider-wrapper edu-animate delay-1">
+        
+        <!-- Slider Track (Moves left/right) -->
+        <div class="slider-track" id="authorTrack">
+            
+            <!-- Slide 1: Dr. Arvind -->
+            <div class="slide">
+                <div class="author-container">
+                    <div class="author-profile">
+                        <div class="author-image-wrapper">
+                            <img src="./asset/c1.webp" alt="Dr. Arvind Kumar">
+                        </div>
+                        <div class="author-info">
+                            <h3>Dr. Arvind Kumar</h3>
+                            <span class="expertise-tag">AI & EdTech Specialist</span>
+                            <p class="author-bio">With over 15 years of experience in education technology, Dr. Arvind bridges the gap between traditional learning and futuristic AI integration.</p>
+                        </div>
+                    </div>
+                    <div class="author-articles">
+                        <h4>Top Articles</h4>
+                        <ul class="article-list">
+                            <li><a href="#"><span class="article-title">Machine Learning in Syllabus Design</span><span class="arrow">→</span></a></li>
+                            <li><a href="#"><span class="article-title">Virtual Reality College Labs</span><span class="arrow">→</span></a></li>
+                            <li><a href="#"><span class="article-title">Next-Gen Students & Web3</span><span class="arrow">→</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2: Sarah Jenkins -->
+            <div class="slide">
+                <div class="author-container">
+                    <div class="author-profile">
+                        <div class="author-image-wrapper">
+                            <img src="./asset/c2.webp" alt="Sarah Jenkins">
+                        </div>
+                        <div class="author-info">
+                            <h3>Sarah Jenkins</h3>
+                            <span class="expertise-tag">Career Coach & Mentor</span>
+                            <p class="author-bio">Sarah helps university students navigate the complex modern job market, focusing on essential soft skills and resume building.</p>
+                        </div>
+                    </div>
+                    <div class="author-articles">
+                        <h4>Top Articles</h4>
+                        <ul class="article-list">
+                            <li><a href="#"><span class="article-title">Top 5 Skills Employers Look For</span><span class="arrow">→</span></a></li>
+                            <li><a href="#"><span class="article-title">Acing Your First Tech Interview</span><span class="arrow">→</span></a></li>
+                            <li><a href="#"><span class="article-title">Networking for Introverts</span><span class="arrow">→</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3: Prof. David Lee -->
+            <div class="slide">
+                <div class="author-container">
+                    <div class="author-profile">
+                        <div class="author-image-wrapper">
+                            <img src="./asset/b6.webp" alt="Prof. David Lee">
+                        </div>
+                        <div class="author-info">
+                            <h3>Prof. David Lee</h3>
+                            <span class="expertise-tag">Cognitive Psychology</span>
+                            <p class="author-bio">David explores the science of learning, teaching students how to study smarter, retain more information, and beat procrastination.</p>
+                        </div>
+                    </div>
+                    <div class="author-articles">
+                        <h4>Top Articles</h4>
+                        <ul class="article-list">
+                            <li><a href="#"><span class="article-title">Mastering the Pomodoro Technique</span><span class="arrow">→</span></a></li>
+                            <li><a href="#"><span class="article-title">The Psychology of Procrastination</span><span class="arrow">→</span></a></li>
+                            <li><a href="#"><span class="article-title">Active Recall vs Passive Reading</span><span class="arrow">→</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div> <!-- End Slider Track -->
+
+        <!-- Slider Controls -->
+        <button class="slider-btn prev-btn" id="prevBtn">&#10094;</button>
+        <button class="slider-btn next-btn" id="nextBtn">&#10095;</button>
+
+        <!-- Slider Dots -->
+        <div class="slider-dots">
+            <span class="dot active" data-index="0"></span>
+            <span class="dot" data-index="1"></span>
+            <span class="dot" data-index="2"></span>
+        </div>
+
+    </div>
+
+    <!-- JavaScript for Slider -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const track = document.getElementById('authorTrack');
+            const slides = document.querySelectorAll('.slide');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            const dots = document.querySelectorAll('.dot');
+            
+            let currentIndex = 0;
+            const totalSlides = slides.length;
+
+            // Function to update slider position and dots
+            function updateSlider(index) {
+                // Move track
+                track.style.transform = `translateX(-${index * 100}%)`;
+                
+                // Update dots
+                dots.forEach(dot => dot.classList.remove('active'));
+                dots[index].classList.add('active');
+            }
+
+            // Next Button Click
+            nextBtn.addEventListener('click', () => {
+                currentIndex = (currentIndex + 1) % totalSlides; // Loops back to 0
+                updateSlider(currentIndex);
+            });
+
+            // Prev Button Click
+            prevBtn.addEventListener('click', () => {
+                currentIndex = (currentIndex - 1 + totalSlides) % totalSlides; // Loops to end
+                updateSlider(currentIndex);
+            });
+
+            // Dot Click
+            dots.forEach(dot => {
+                dot.addEventListener('click', (e) => {
+                    currentIndex = parseInt(e.target.getAttribute('data-index'));
+                    updateSlider(currentIndex);
+                });
+            });
+            
+            // Auto Slide every 5 seconds (Optional)
+            setInterval(() => {
+                currentIndex = (currentIndex + 1) % totalSlides;
+                updateSlider(currentIndex);
+            }, 5000);
+        });
+    </script>
+</section>
+
+<!-- Interactive Reading Preview Section -->
+<section class="edu-reading-preview">
+    
+    <div class="preview-header edu-animate">
+        <h2>Inside the Article 📖</h2>
+        <p>Get a sneak peek into our premium content.</p>
+    </div>
+
+    <div class="preview-container">
+        
+        <!-- Left Side: Scrollable Article Excerpt -->
+        <div class="preview-text-col edu-animate delay-1">
+            <span class="preview-tag">Exclusive Preview</span>
+            <h3 class="preview-title">The Evolution of AI in Modern Curriculums</h3>
+            
+            <div class="read-meta">
+                <span class="author-name">By Dr. Arvind Kumar</span> • 
+                <span class="read-time">⏱️ 8 min read</span>
+            </div>
+
+            <div class="article-content">
+                <p>Artificial Intelligence is no longer just a subject taught in advanced computer science classes; it is rapidly becoming the foundation upon which future educational curriculums are built.</p>
+                
+                <p>Imagine a classroom where the textbook adapts to the student's reading level in real-time. If a student struggles with a complex physics concept, the AI instantly generates a simplified 3D interactive model to explain it. This isn't science fiction—it is the reality of modern EdTech.</p>
+
+                <p>However, the integration of such technology brings its own set of challenges. Educators are now tasked with not just teaching, but curating AI interactions. The role of the teacher is shifting from a "provider of knowledge" to a "facilitator of critical thinking."</p>
+
+                <!-- <p>As we look towards the next decade, institutions that fail to integrate these tools will find their students falling behind in a hyper-competitive global market.</p> -->
+                
+                <!-- Fade out effect at the end of text to show it's a preview -->
+                <div class="text-fade-out"></div>
+            </div>
+
+            <button class="edu-btn continue-reading-btn">
+                Unlock Full Article <span class="arrow">→</span>
+            </button>
+        </div>
+
+        <!-- Right Side: Sticky Media (Image/Video) -->
+        <div class="preview-media-col edu-animate delay-2">
+            <div class="sticky-media">
+                <div class="media-wrapper">
+                    <img src="./asset/b7.webp" alt="AI in Education Preview">
+                    
+                    <!-- Play button overlay to mimic a video preview -->
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="30" height="30">
+                            <path d="M8 5v14l11-7z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="media-caption">Interactive Video: AI transforming textbooks.</div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Scroll Animation Script -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const previewElements = document.querySelectorAll('.edu-reading-preview .edu-animate');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.15 });
+
+            previewElements.forEach(el => observer.observe(el));
+        });
+    </script>
+</section>
+
+
+<section class="story-wrapper">
+  <div class="progress-container">
+    <div class="progress-bar" id="progress"></div>
+  </div>
+
+  <div class="container">
+    <h1 class="title">The Golden Path of Digital Dreams</h1>
+    <div class="meta">⏱ Reading time: 5 min • Premium Story Mode</div>
+
+    <p>In a world driven by pixels and motion, storytelling has evolved beyond simple text into immersive digital experiences.</p>
+
+    <p class="quote">“Design is not just what it looks like — it is how it feels while reading.”</p>
+
+    <p>Every scroll now becomes a cinematic journey, where typography, spacing, and motion guide the reader like a film director.</p>
+  </div>
+</section>
+
+
+
+
+
+    <footer class="footer-section">
+        <div class="footer-container fade-up">
+
+            <div class="footer-grid">
+
+                <div class="footer-col brand-col">
+                    <div class="nav-logo">
+                        <a href="index.html">
+                            <img src="./asset/yellow_logo.webp" alt="logo" class="logo">
+                        </a>
+                    </div>
+                    <p>"Your gateway to advanced learning. Master new skills with industry experts, interactive live
+                        sessions, and a next-gen educational platform."</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-google"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col links-col">
+                    <h3>Platform</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="#">course</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col support-col">
+                    <h3>Support</h3>
+                    <ul>
+                        <li class="support-item"><i class="far fa-envelope"></i> support@edusmart.learning</li>
+                        <li class="support-item"><i class="fas fa-map-marker-alt"></i> Salem City, Tamil Nadu</li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Newsletter -->
+                <div class="footer-col newsletter-col">
+                    <h3>Newsletter</h3>
+                    <p>Get exclusive course drops & tournament alerts.</p>
+                    <form class="newsletter-form" id="newsletter-form" novalidate>
+                        <div class="newsletter-input-wrap">
+                            <input type="email" id="newsletter-email" placeholder="Enter student email">
+                            <button type="submit">JOIN</button>
+                        </div>
+                        <span id="email-msg" class="form-msg"></span>
+                    </form>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 EduSmart Learning. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Terms & Conditions</a> | <a href="#">Privacy Policy</a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const elements = document.querySelectorAll('.edu-animate');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.15 });
+
+            elements.forEach(el => observer.observe(el));
+        });
+    </script>
+
+<!-- ⚡ INLINE JS -->
+<script>
+// Scroll Progress
+window.addEventListener("scroll", () => {
+    let scrollTop = document.documentElement.scrollTop;
+    let scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    let progress = (scrollTop / scrollHeight) * 100;
+    document.getElementById("progress").style.height = progress + "%";
+});
+
+// Targeted Paragraph Animation (Scope fixed to .container)
+const paragraphs = document.querySelectorAll(".container p");
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            entry.target.classList.add("show");
+        }
+    });
+}, { threshold: 0.2 });
+
+paragraphs.forEach(p => observer.observe(p));
+</script>
+</body>
+
+</html>

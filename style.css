@@ -957,7 +957,7 @@
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 15px;
 
-  color: #fff;
+  color: rgba(35, 21, 75, 0.952);
   font-weight: 600;
 
   animation: float 4s ease-in-out infinite;
@@ -1100,30 +1100,47 @@
 /* ===================
    TABLET
 =================== */
-
+/* ===================
+   TABLET 
+=================== */
 @media (max-width: 992px) {
   .learning-container {
     flex-direction: column;
     gap: 60px;
   }
 
+  /* 1. Learning Experience Content Mudhalla Vara */
   .learning-content {
+    order: 1;
     text-align: center;
+  }
+
+  /* 2. Image and Cards Rendaavathu Vara */
+  .learning-image {
+    order: 2;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Image-kum cards-kum ulla gap */
+  }
+
+  .learning-image img {
+    height: 500px;
+    order: 1; /* Image cards-ku mela vara */
   }
 
   .learning-content h2 {
     font-size: 3rem;
   }
 
-  .learning-image img {
-    height: 500px;
+  .learning-features {
+    text-align: left; /* Mobile-la padikka easy-a irukka left align */
   }
 }
 
 /* ===================
    MOBILE
 =================== */
-
 @media (max-width: 768px) {
   .learning-experience {
     padding: 80px 20px;
@@ -1145,30 +1162,24 @@
     height: 350px;
   }
 
+  /* Cards Image mela varama thaniya vara */
   .floating-card {
-    position: relative;
-    margin-top: 15px;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 0;
-    width: fit-content;
-  }
-
-  .learning-image {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .learning-box {
-    text-align: left;
+    position: relative; /* Overlap aagardha thadukkum */
+    top: auto;
+    bottom: auto;
+    left: auto;
+    right: auto;
+    width: 100%; 
+    justify-content: center; /* Center alignment */
+    margin: 0;
+    animation: none; /* Mobile view-la animation stop panna clean-a irukkum */
+    order: 2; /* Image-ku keela cards vara */
   }
 }
 
 /* ===================
    SMALL MOBILE
 =================== */
-
 @media (max-width: 576px) {
   .learning-content h2 {
     font-size: 2rem;
