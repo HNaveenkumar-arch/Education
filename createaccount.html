@@ -9,7 +9,6 @@
     <title>Create Account - Stackly</title>
     <link rel="stylesheet" href="common.css">
     <style>
-        /* BASE STYLES */
         * {
             margin: 0;
             padding: 0;
@@ -17,7 +16,6 @@
             font-family: 'Segoe UI', sans-serif;
         }
 
-        /* Modern Purple Gradient Background */
         body {
             background: linear-gradient(135deg, #4C1D95 0%, #2E1065 100%);
             min-height: 100vh;
@@ -27,7 +25,6 @@
             padding: 20px;
         }
 
-        /* THE BOX CONTAINER */
         .login-container {
             display: flex;
             width: 100%;
@@ -38,7 +35,6 @@
             overflow: hidden;
         }
 
-        /* LEFT SIDE (Form Area) - FIXED SCROLL ISSUE */
         .left-panel {
             flex: 1;
             padding: 40px;
@@ -46,10 +42,8 @@
             flex-direction: column;
             overflow-y: auto;
             max-height: 90vh;
-            /* Removed justify-content: center; so top content doesn't get hidden */
         }
 
-        /* Back to Home Link */
         .back-home {
             display: inline-flex;
             align-items: center;
@@ -72,7 +66,6 @@
             height: 16px;
         }
 
-        /* Logo */
         .logo {
             display: flex;
             align-items: center;
@@ -104,7 +97,6 @@
             font-size: 14px;
         }
 
-        /* Role Selector */
         .role-selector {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -132,7 +124,6 @@
             background: rgba(251, 191, 36, 0.1);
         }
 
-        /* Input Fields */
         .input-group {
             margin-bottom: 15px;
             position: relative;
@@ -162,13 +153,11 @@
             box-shadow: 0 0 0 3px rgba(251, 191, 36, 0.2);
         }
 
-        /* Fix browser default eye */
         input[type="password"]::-ms-reveal,
         input[type="password"]::-ms-clear {
             display: none;
         }
 
-        /* Validation Errors */
         .field-error {
             color: #ef4444;
             font-size: 12px;
@@ -181,7 +170,6 @@
             border-color: #ef4444;
         }
 
-        /* Password Eye */
         .pwd-wrapper {
             position: relative;
         }
@@ -208,7 +196,6 @@
             height: 18px;
         }
 
-        /* Submit Button */
         .btn-submit {
             width: 100%;
             padding: 12px;
@@ -229,7 +216,6 @@
             background: #F59E0B;
         }
 
-        /* Social Login Section */
         .social-login {
             text-align: center;
             margin-top: 20px;
@@ -293,7 +279,6 @@
             fill: currentColor;
         }
 
-        /* Login Link */
         .links {
             text-align: center;
             margin-top: 20px;
@@ -311,14 +296,12 @@
             color: #FBBF24;
         }
 
-        /* RIGHT PANEL (Image Slider) */
         .right-panel {
             flex: 1.2;
             position: relative;
             background: #000;
         }
 
-        /* --- 3-SECOND PRELOADER CSS (PURPLE) --- */
         #preloader {
             position: fixed;
             top: 0;
@@ -407,7 +390,6 @@
             z-index: 10;
         }
 
-        /* MOBILE RESPONSIVE - IMAGE AT THE TOP */
         @media(max-width: 850px) {
             .login-container {
                 flex-direction: column;
@@ -417,7 +399,6 @@
             .right-panel {
                 display: block;
                 min-height: 200px;
-                /* order: -1;  */
             }
 
             .left-panel {
@@ -439,7 +420,6 @@
 
     <div class="login-container">
 
-        <!-- LEFT PANEL: FORM -->
         <div class="left-panel">
 
             <a href="index.html" class="back-home">
@@ -455,7 +435,6 @@
                 <img src="./asset/yellow_logo.webp" alt="logo" class="logo">
             </div>
 
-            <!-- Create Account Title -->
             <h2>Create Account</h2>
             <p>Join EduSmart today!</p>
 
@@ -516,24 +495,23 @@
                     <div class="field-error" id="cpwdError">Please confirm your password</div>
                 </div>
 
-                <!-- Static Button Text: Create Account -->
                 <button type="submit" class="btn-submit" id="submitBtn">Create Account</button>
             </form>
 
             <div class="social-login">
                 <p>or sign up with</p>
                 <div class="social-icons">
-                    <!-- Google -->
+
                     <button class="social-btn"><svg viewBox="0 0 24 24">
                             <path
                                 d="M12.24 10.285V14.4h6.806c-.275 1.765-2.056 5.174-6.806 5.174-4.095 0-7.439-3.389-7.439-7.574s3.345-7.574 7.439-7.574c2.33 0 3.891.989 4.785 1.849l3.254-3.138C18.189 1.186 15.479 0 12.24 0c-6.635 0-12 5.365-12 12s5.365 12 12 12c6.926 0 11.52-4.869 11.52-11.726 0-.788-.085-1.39-.189-1.989H12.24z" />
                         </svg></button>
-                    <!-- Instagram -->
+
                     <button class="social-btn"><svg viewBox="0 0 24 24">
                             <path
                                 d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
                         </svg></button>
-                    <!-- Twitter -->
+
                     <button class="social-btn"><svg viewBox="0 0 24 24">
                             <path
                                 d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
@@ -546,22 +524,16 @@
             </div>
         </div>
 
-        <!-- RIGHT PANEL: IMAGE SLIDER -->
         <div class="right-panel">
-            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1000&auto=format&fit=crop"
-                class="slide active">
-            <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?q=80&w=1000&auto=format&fit=crop"
-                class="slide">
-            <img src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?q=80&w=1000&auto=format&fit=crop"
-                class="slide">
+            <img src="./asset/d5.webp" class="slide active">
+            <img src="./asset/d7.webp" class="slide">
+            <img src="./asset/d8.webp" class="slide">
             <div class="image-overlay"></div>
         </div>
 
     </div>
 
-    <!-- JAVASCRIPT -->
     <script>
-        // Role Selection Logic
         let currentRole = 'student';
         const studentCard = document.getElementById('reg-student');
         const teacherCard = document.getElementById('reg-teacher');
@@ -578,11 +550,9 @@
             studentCard.classList.remove('active');
         });
 
-        // SVG Constants for Eye
         const eyeOpenSVG = `<path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle>`;
         const eyeClosedSVG = `<path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24M1 1l22 22"></path>`;
 
-        // Password 1 Eye Toggle
         const toggleEye1 = document.getElementById('toggleEye1');
         const pwdInput1 = document.getElementById('regPwd');
         const eyeIcon1 = document.querySelector('.eyeIcon1');
@@ -597,7 +567,6 @@
             }
         });
 
-        // Password 2 (Confirm) Eye Toggle
         const toggleEye2 = document.getElementById('toggleEye2');
         const pwdInput2 = document.getElementById('confirmPwd');
         const eyeIcon2 = document.querySelector('.eyeIcon2');
@@ -612,7 +581,6 @@
             }
         });
 
-        // Form Validation & Redirection
         document.getElementById('registerForm').addEventListener('submit', (e) => {
             e.preventDefault();
 
@@ -638,7 +606,6 @@
 
             let isValid = true;
 
-            // Name
             if (nameVal === '') {
                 nameGroup.classList.add('input-error');
                 nameError.innerText = 'Full Name is required';
@@ -646,7 +613,6 @@
                 isValid = false;
             }
 
-            // Email
             if (emailVal === '') {
                 emailGroup.classList.add('input-error');
                 emailError.innerText = 'Email is required';
@@ -654,7 +620,6 @@
                 isValid = false;
             }
 
-            // Password
             if (pwdVal === '') {
                 pwdGroup.classList.add('input-error');
                 pwdError.innerText = 'Password is required';
@@ -667,7 +632,6 @@
                 isValid = false;
             }
 
-            // Confirm Password
             if (cpwdVal === '') {
                 cpwdGroup.classList.add('input-error');
                 cpwdError.innerText = 'Please confirm your password';
@@ -680,13 +644,11 @@
                 isValid = false;
             }
 
-            // Redirect to Login if form is valid (NO POPUPS)
             if (isValid) {
                 window.location.href = 'login.html';
             }
         });
 
-        // Remove error styling on input
         const clearError = (inputId, groupId, errorId) => {
             document.getElementById(inputId).addEventListener('input', function () {
                 document.getElementById(groupId).classList.remove('input-error');
@@ -699,7 +661,6 @@
         clearError('regPwd', 'pwdGroup', 'pwdError');
         clearError('confirmPwd', 'cpwdGroup', 'cpwdError');
 
-        // Image Slider Logic
         let slideIndex = 0;
         const slides = document.querySelectorAll('.slide');
 
@@ -711,21 +672,18 @@
             }, 3000);
         }
 
-        // --- PRELOADER LOGIC (3 SECONDS) ---
         window.addEventListener('load', () => {
             const preloader = document.getElementById('preloader');
 
-            // Page scroll aagakudathu nu block pandrom
             document.body.style.overflow = 'hidden';
 
             setTimeout(() => {
                 preloader.style.opacity = '0';
                 preloader.style.visibility = 'hidden';
 
-                // 3 Seconds appuram scroll allow pandrom
                 document.body.style.overflow = 'auto';
-                document.body.style.overflowX = 'hidden'; // Keeps horizontal scroll locked
-            }, 3000); // 3000ms = 3 Seconds
+                document.body.style.overflowX = 'hidden';
+            }, 1000);
         });
     </script>
 </body>

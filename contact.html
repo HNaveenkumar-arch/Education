@@ -43,8 +43,10 @@
                         About</a></li>
                 <li><a href="course.html" class="menu-link" data-page="Course"><i class="fas fa-laptop-code"></i>
                         Course</a></li>
-                <li><a href="blog.html" class="menu-link" data-page="Blog"><i class="fas fa-newspaper"></i> Blog</a></li>
-                <li><a href="contact.html" class="menu-link active" data-page="Contact"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="blog.html" class="menu-link" data-page="Blog"><i class="fas fa-newspaper"></i> Blog</a>
+                </li>
+                <li><a href="contact.html" class="menu-link active" data-page="Contact"><i class="fas fa-envelope"></i>
+                        Contact</a></li>
             </ul>
 
             <div class="nav-actions">
@@ -62,11 +64,13 @@
                 <li><a href="index.html" class="mobile-link" data-page="Home"><i class="fas fa-home"></i>Home</a></li>
                 <li><a href="about.html" class="mobile-link" data-page="About"><i class="fas fa-info-circle"></i>
                         About</a></li>
-                <li><a href="course.html" class="mobile-link" data-page="Course"><i
-                            class="fas fa-laptop-code"></i> Course</a>
+                <li><a href="course.html" class="mobile-link" data-page="Course"><i class="fas fa-laptop-code"></i>
+                        Course</a>
                 </li>
-                <li><a href="blog.html" class="mobile-link" data-page="Blog"><i class="fas fa-newspaper"></i> Blog</a></li>
-                <li><a href="contact.html" class="mobile-link active" data-page="Contact"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="blog.html" class="mobile-link" data-page="Blog"><i class="fas fa-newspaper"></i> Blog</a>
+                </li>
+                <li><a href="contact.html" class="mobile-link active" data-page="Contact"><i
+                            class="fas fa-envelope"></i> Contact</a></li>
             </ul>
             <div class="mobile-btn-wrapper">
                 <button class="btn-login mobile-login-btn" onclick="window.location.href='login.html'">Login</button>
@@ -75,6 +79,199 @@
             </div>
         </div>
     </nav>
+
+    <section class="contact-hero-section">
+
+        <div class="floating-shape shape-gold-blob"></div>
+        <div class="floating-shape shape-purple-blob"></div>
+        <div class="floating-particle particle-1"></div>
+        <div class="floating-particle particle-2"></div>
+        <div class="floating-particle particle-3"></div>
+
+        <div class="contact-hero-content edu-animate">
+
+            <div class="custom-breadcrumb">
+                <a href="index.html" class="home-link">Home</a>
+                <span class="arrow">»</span>
+                <span class="current-page">Contact Us</span>
+            </div>
+
+            <h1 class="contact-title">Get In Touch <br><span class="highlight-gold">With Us</span></h1>
+            <p class="contact-subtitle">
+                Have questions, ideas, or project requirements? We'd love to hear from you.
+            </p>
+
+        </div>
+    </section>
+
+    <section class="contact-info-section">
+        <div class="info-container">
+
+            <div class="info-left scroll-slide-left">
+                <h2>Here's how to <span class="highlight-gold">reach us</span></h2>
+                <p class="info-desc">Whether you have a question about our courses, pricing, or anything else, our team
+                    is ready to answer all your questions.</p>
+
+                <div class="contact-list">
+
+                    <div class="contact-item">
+                        <div class="icon-box">📍</div>
+                        <div class="item-text">
+                            <h4>Office Address</h4>
+                            <p>123 Innovation Drive, Tech Park,<br>Kochi, Kerala 682001</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="icon-box">📞</div>
+                        <div class="item-text">
+                            <h4>Phone Number</h4>
+                            <p>+91 98765 43210<br>+91 87654 32109</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="icon-box">✉️</div>
+                        <div class="item-text">
+                            <h4>Email Address</h4>
+                            <p>hello@knowledgehub.com<br>support@knowledgehub.com</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="icon-box">🕒</div>
+                        <div class="item-text">
+                            <h4>Working Hours</h4>
+                            <p>Monday - Friday: 9:00 AM - 6:00 PM<br>Saturday & Sunday: Closed</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="info-right scroll-slide-right">
+                <div class="image-wrapper">
+                    <img src="./asset/d1.webp" alt="Contact Customer Support">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="split-contact-form-section">
+        <div class="split-form-container">
+
+            <div class="form-column scroll-slide-left">
+                <div class="form-header-left">
+                    <h2>Send Us a <span class="highlight-gold">Message</span></h2>
+                    <p>Fill out the form below and we'll get back to you within 24 hours.</p>
+                </div>
+
+                <div class="glass-form-wrapper">
+                    <form id="contactForm" class="contact-form" novalidate>
+
+                        <div class="input-group">
+                            <input type="text" id="fullName" class="form-input" placeholder=" " required>
+                            <label for="fullName" class="floating-label">Full Name</label>
+                            <span class="error-msg" id="nameError">Please enter your full name.</span>
+                        </div>
+
+                        <div class="input-group">
+                            <input type="email" id="emailAddress" class="form-input" placeholder=" " required>
+                            <label for="emailAddress" class="floating-label">Email Address</label>
+                            <span class="error-msg" id="emailError">Please enter a valid email address.</span>
+                        </div>
+
+                        <div class="input-group">
+                            <input type="text" id="subject" class="form-input" placeholder=" " required>
+                            <label for="subject" class="floating-label">Subject</label>
+                            <span class="error-msg" id="subjectError">Please enter a subject.</span>
+                        </div>
+
+                        <div class="input-group">
+                            <textarea id="message" class="form-input form-textarea" rows="4" placeholder=" "
+                                required></textarea>
+                            <label for="message" class="floating-label">Your Message</label>
+                            <span class="error-msg" id="msgError">Please write your message.</span>
+                        </div>
+
+                        <button type="submit" class="submit-btn" id="submitBtn">
+                            Send Message <span class="btn-icon">🚀</span>
+                        </button>
+
+                    </form>
+
+                    <div class="form-success-msg" id="formSuccess">
+                        <div class="success-icon">✅</div>
+                        <h3>Message Sent Successfully!</h3>
+                        <p>Thank you for reaching out. Our team will get back to you shortly.</p>
+                        <button class="ghost-btn mt-20" onclick="location.reload()">Send Another Message</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="image-column scroll-slide-right">
+                <div class="form-image-wrapper">
+                    <img src="./asset/d2.webp" alt="Team Collaboration">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="map-section">
+
+        <div class="map-header edu-animate">
+            <h2>Find Us on the <span class="highlight-gold">Map</span></h2>
+            <p>Drop by our office for a coffee and a chat about your next big idea.</p>
+        </div>
+
+        <div class="map-wrapper edu-animate delay-1">
+
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125745.39007629578!2d76.22014169999999!3d9.97086715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080d514abec6bf%3A0xbd582caa5844192!2sKochi%2C%20Kerala!5e0!3m2!1sen!2sin!4v1689312000000!5m2!1sen!2sin"
+                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+
+            <div class="map-overlay"></div>
+
+            <div class="custom-pin-container">
+                <div class="pin-pulse"></div>
+                <div class="pin-icon">📍</div>
+                <div class="pin-card">
+                    <h4>Knowledge Hub HQ</h4>
+                    <p>123 Innovation Drive, Kochi</p>
+                    <a href="404page.html" class="direction-btn">Get Directions <span class="arrow">→</span></a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="premium-cta-final">
+
+        <div class="floating-bg cta-blob-1"></div>
+        <div class="floating-bg cta-blob-2"></div>
+
+        <div class="cta-content-wrapper edu-animate">
+
+            <h2 class="cta-title">Ready to Start Your <br><span class="highlight-gold">Next Project?</span></h2>
+            <p class="cta-subtitle">Let's create something amazing together.</p>
+
+            <div class="cta-button-group">
+                <a href="404page.html" class="cta-btn primary-glow-btn">
+                    📅 Schedule a Call
+                </a>
+                <a href="404page.html" class="cta-btn secondary-ghost-btn">
+                    ✉️ Send Inquiry
+                </a>
+            </div>
+
+        </div>
+    </section>
+
 
 
 
@@ -93,9 +290,9 @@
                     <p>"Your gateway to advanced learning. Master new skills with industry experts, interactive live
                         sessions, and a next-gen educational platform."</p>
                     <div class="footer-social">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-google"></i></a>
+                        <a href="404page.html"><i class="fab fa-instagram"></i></a>
+                        <a href="404page.html"><i class="fab fa-twitter"></i></a>
+                        <a href="404page.html"><i class="fab fa-google"></i></a>
                     </div>
                 </div>
 
@@ -104,9 +301,9 @@
                     <ul>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About</a></li>
-                        <li><a href="#">course</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="course.html">course</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="course.html">Contact</a></li>
                     </ul>
                 </div>
 
@@ -118,7 +315,6 @@
                     </ul>
                 </div>
 
-                <!-- Column 4: Newsletter -->
                 <div class="footer-col newsletter-col">
                     <h3>Newsletter</h3>
                     <p>Get exclusive course drops & tournament alerts.</p>
@@ -136,7 +332,7 @@
             <div class="footer-bottom">
                 <p>&copy; 2026 EduSmart Learning. All rights reserved.</p>
                 <div class="footer-legal">
-                    <a href="#">Terms & Conditions</a> | <a href="#">Privacy Policy</a>
+                    <a href="404page.html">Terms & Conditions</a> | <a href="404page.html">Privacy Policy</a>
                 </div>
             </div>
 
@@ -145,6 +341,156 @@
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
     <script src="script.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const animateElements = document.querySelectorAll('.edu-animate');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            animateElements.forEach(el => observer.observe(el));
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const slideElements = document.querySelectorAll('.scroll-slide-left, .scroll-slide-right');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.15 });
+
+            slideElements.forEach(el => observer.observe(el));
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+            const contactForm = document.getElementById('contactForm');
+
+            if (contactForm) {
+
+                const fullName = document.getElementById('fullName');
+                const emailAddress = document.getElementById('emailAddress');
+                const subject = document.getElementById('subject');
+                const message = document.getElementById('message');
+                const submitBtn = document.getElementById('submitBtn');
+
+                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                const namePattern = /^[a-zA-Z\s]{2,50}$/; // Only letters and spaces, min 2 chars
+
+                contactForm.addEventListener('submit', function (e) {
+                    e.preventDefault();
+
+                    let isValid = true;
+
+                    function validateField(input, errorId, condition, customMessage = null) {
+                        const errorElement = document.getElementById(errorId);
+                        if (!condition) {
+                            input.classList.add('input-error');
+                            errorElement.classList.add('show-error');
+                            if (customMessage) errorElement.textContent = customMessage;
+                            isValid = false;
+                        } else {
+                            input.classList.remove('input-error');
+                            errorElement.classList.remove('show-error');
+                        }
+                    }
+
+                    if (fullName.value.trim() === "") {
+                        validateField(fullName, 'nameError', false, "Please enter your full name.");
+                    } else if (!namePattern.test(fullName.value.trim())) {
+                        validateField(fullName, 'nameError', false, "Name should only contain letters.");
+                    } else {
+                        validateField(fullName, 'nameError', true);
+                    }
+
+                    if (emailAddress.value.trim() === "") {
+                        validateField(emailAddress, 'emailError', false, "Email address is required.");
+                    } else if (!emailPattern.test(emailAddress.value.trim())) {
+                        validateField(emailAddress, 'emailError', false, "Please enter a valid email address.");
+                    } else {
+                        validateField(emailAddress, 'emailError', true);
+                    }
+
+                    validateField(subject, 'subjectError', subject.value.trim().length >= 3, "Subject must be at least 3 characters.");
+
+                    validateField(message, 'msgError', message.value.trim().length >= 10, "Message must be at least 10 characters.");
+
+                    if (isValid) {
+                        const originalBtnText = submitBtn.innerHTML;
+                        submitBtn.innerHTML = 'Sending... ⏳';
+                        submitBtn.style.opacity = '0.7';
+                        submitBtn.style.cursor = 'not-allowed';
+                        submitBtn.disabled = true;
+
+                        setTimeout(() => {
+                            window.location.href = '404page.html'
+                        }, 1500);
+                    }
+                });
+
+                const formInputs = [fullName, emailAddress, subject, message];
+
+                formInputs.forEach(input => {
+                    input.addEventListener('input', () => {
+                        if (input.classList.contains('input-error')) {
+                            input.classList.remove('input-error');
+                            const errorMessage = input.parentElement.querySelector('.error-msg');
+                            if (errorMessage) {
+                                errorMessage.classList.remove('show-error');
+                            }
+                        }
+                    });
+                });
+            }
+        });
+    </script>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const mapElements = document.querySelectorAll('.map-section .edu-animate');
+
+            const mapObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.2 });
+
+            mapElements.forEach(el => mapObserver.observe(el));
+        });
+    </script>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const animateElements = document.querySelectorAll('.edu-animate');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.15 });
+
+            animateElements.forEach(el => observer.observe(el));
+        });
+    </script>
 
 </body>
 

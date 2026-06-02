@@ -9,7 +9,6 @@
     <title>Login - stackly</title>
     <link rel="stylesheet" href="common.css">
     <style>
-        /* BASE STYLES */
         * {
             margin: 0;
             padding: 0;
@@ -17,7 +16,6 @@
             font-family: 'Segoe UI', sans-serif;
         }
 
-        /* Modern Purple Gradient Background */
         body {
             background: linear-gradient(135deg, #4C1D95 0%, #2E1065 100%);
             min-height: 100vh;
@@ -27,7 +25,6 @@
             padding: 20px;
         }
 
-        /* THE BOX CONTAINER */
         .login-container {
             display: flex;
             width: 100%;
@@ -38,7 +35,6 @@
             overflow: hidden;
         }
 
-        /* LEFT SIDE (Form Area) */
         .left-panel {
             flex: 1;
             padding: 40px;
@@ -47,7 +43,6 @@
             justify-content: center;
         }
 
-        /* Back to Home Link */
         .back-home {
             display: inline-flex;
             align-items: center;
@@ -70,7 +65,6 @@
             height: 16px;
         }
 
-        /* Logo */
         .logo {
             display: flex;
             align-items: center;
@@ -102,7 +96,6 @@
             font-size: 14px;
         }
 
-        /* Role Selector */
         .role-selector {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -130,7 +123,6 @@
             background: rgba(251, 191, 36, 0.1);
         }
 
-        /* Input Fields */
         .input-group {
             margin-bottom: 15px;
             position: relative;
@@ -160,13 +152,11 @@
             box-shadow: 0 0 0 3px rgba(251, 191, 36, 0.2);
         }
 
-        /* Fix browser default eye */
         input[type="password"]::-ms-reveal,
         input[type="password"]::-ms-clear {
             display: none;
         }
 
-        /* Validation Errors */
         .field-error {
             color: #ef4444;
             font-size: 12px;
@@ -179,7 +169,6 @@
             border-color: #ef4444;
         }
 
-        /* Password Eye */
         .pwd-wrapper {
             position: relative;
         }
@@ -206,7 +195,6 @@
             height: 18px;
         }
 
-        /* Form Options (Remember Me & Forgot Password) */
         .form-options {
             display: flex;
             justify-content: space-between;
@@ -248,7 +236,6 @@
             color: #FBBF24;
         }
 
-        /* Submit Button */
         .btn-submit {
             width: 100%;
             padding: 12px;
@@ -268,7 +255,6 @@
             background: #F59E0B;
         }
 
-        /* Social Login Section */
         .social-login {
             text-align: center;
             margin-top: 20px;
@@ -332,7 +318,6 @@
             fill: currentColor;
         }
 
-        /* Create Account Link */
         .links {
             text-align: center;
             margin-top: 20px;
@@ -350,7 +335,6 @@
             color: #FBBF24;
         }
 
-        /* RIGHT PANEL (Image Slider) */
         .right-panel {
             flex: 1.2;
             position: relative;
@@ -382,7 +366,6 @@
             z-index: 10;
         }
 
-        /* MOBILE RESPONSIVE */
         @media(max-width: 850px) {
             .login-container {
                 flex-direction: column;
@@ -391,9 +374,7 @@
 
             .right-panel {
                 display: block;
-                /* Hide aana image-ah thirumba kondu varom */
                 min-height: 200px;
-                /* Mobile-la image-oda height */
             }
 
             .left-panel {
@@ -401,7 +382,6 @@
             }
         }
 
-        /* --- 3-SECOND PRELOADER CSS (PURPLE) --- */
         #preloader {
             position: fixed;
             top: 0;
@@ -478,10 +458,8 @@
 
     <div class="login-container">
 
-        <!-- LEFT PANEL: FORM -->
         <div class="left-panel">
 
-            <!-- Back to Home Link -->
             <a href="index.html" class="back-home">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                     stroke-linejoin="round">
@@ -532,12 +510,11 @@
                     <div class="field-error" id="pwdError">Password is required</div>
                 </div>
 
-                <!-- Remember Me & Forgot Password -->
                 <div class="form-options">
                     <label class="remember-me">
                         <input type="checkbox"> Remember me
                     </label>
-                    <a href="#" class="forgot-pwd">Forgot Password?</a>
+                    <a href="404page.html" class="forgot-pwd">Forgot Password?</a>
                 </div>
 
                 <button type="submit" class="btn-submit" id="submitBtn">Login as Student</button>
@@ -572,22 +549,19 @@
             </div>
         </div>
 
-        <!-- RIGHT PANEL: IMAGE SLIDER -->
         <div class="right-panel">
-            <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1000&auto=format&fit=crop"
+            <img src="./asset/b1.webp"
                 class="slide active">
-            <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=1000&auto=format&fit=crop"
+            <img src="./asset/d3.webp"
                 class="slide">
-            <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1000&auto=format&fit=crop"
+            <img src="./asset/d4.webp"
                 class="slide">
             <div class="image-overlay"></div>
         </div>
 
     </div>
 
-    <!-- JAVASCRIPT -->
     <script>
-        // Role Selection Logic
         let currentRole = 'student';
         const studentCard = document.getElementById('role-student');
         const teacherCard = document.getElementById('role-teacher');
@@ -607,7 +581,6 @@
             submitBtn.innerText = 'Login as Teacher';
         });
 
-        // Password Eye Toggle Logic
         const toggleEye = document.getElementById('toggleEye');
         const pwdInput = document.getElementById('password');
         const eyeIcon = document.getElementById('eyeIcon');
@@ -625,7 +598,6 @@
             }
         });
 
-        // Form Validation (Including 6 characters limit)
         document.getElementById('loginForm').addEventListener('submit', (e) => {
             e.preventDefault();
 
@@ -667,7 +639,6 @@
             }
 
             if (isValid) {
-                // Ithu thaan antha puthu line! (Email-ah save pannuthu)
                 localStorage.setItem('userEmail', emailVal);
 
                 if (currentRole === 'student') {
@@ -688,7 +659,6 @@
             document.getElementById('pwdError').style.display = 'none';
         });
 
-        // Image Slider Logic
         let slideIndex = 0;
         const slides = document.querySelectorAll('.slide');
 
@@ -700,21 +670,18 @@
             }, 3000);
         }
 
-        // --- PRELOADER LOGIC (3 SECONDS) ---
         window.addEventListener('load', () => {
             const preloader = document.getElementById('preloader');
 
-            // Page scroll aagakudathu nu block pandrom
             document.body.style.overflow = 'hidden';
 
             setTimeout(() => {
                 preloader.style.opacity = '0';
                 preloader.style.visibility = 'hidden';
 
-                // 3 Seconds appuram scroll allow pandrom
                 document.body.style.overflow = 'auto';
-                document.body.style.overflowX = 'hidden'; // Keeps horizontal scroll locked
-            }, 3000); // 3000ms = 3 Seconds
+                document.body.style.overflowX = 'hidden'; 
+            }, 1000); 
         });
     </script>
 </body>

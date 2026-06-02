@@ -8,10 +8,8 @@
     <title>Teacher Dashboard - stackly</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Chart.js for Graphs -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
-        /* BASE & THEME */
         * {
             margin: 0;
             padding: 0;
@@ -39,7 +37,6 @@
             --danger: #ef4444;
         }
 
-        /* --- SIDEBAR --- */
         .sidebar {
             width: 260px;
             background: linear-gradient(180deg, var(--primary) 0%, #C2410C 100%);
@@ -143,7 +140,6 @@
             transform: translateY(-3px);
         }
 
-        /* --- MAIN CONTENT AREA --- */
         .main-content {
             flex: 1;
             margin-left: 260px;
@@ -153,7 +149,6 @@
             max-width: 100vw;
         }
 
-        /* --- SCROLL ANIMATION --- */
         .animate-on-scroll {
             opacity: 0;
             transform: translateY(30px);
@@ -165,7 +160,6 @@
             transform: translateY(0);
         }
 
-        /* --- VIEW CONTROLLER --- */
         .view-section {
             display: none;
             width: 100%;
@@ -188,7 +182,6 @@
             }
         }
 
-        /* --- TOP HEADER --- */
         .header {
             display: flex;
             justify-content: space-between;
@@ -207,7 +200,6 @@
             gap: 15px;
         }
 
-        /* Dashboard Badge */
         .dashboard-badge {
             font-size: 11px;
             font-weight: 800;
@@ -231,18 +223,14 @@
 
         .nav-logo .logo {
             height: 45px;
-            /* Unga image size-ku etha mathiri mathikonga */
             width: auto;
             transition: transform 0.3s ease, filter 0.3s ease;
-            /* Yellow logo-ku oru light gold drop shadow */
             filter: drop-shadow(0 2px 5px rgba(251, 191, 36, 0.3));
         }
 
         .nav-logo:hover .logo {
             transform: scale(1.05);
-            /* Light-ah zoom aagum */
             filter: drop-shadow(0 4px 10px rgba(251, 191, 36, 0.6));
-            /* Glow athigamagum */
         }
 
         .welcome-msg h1 {
@@ -306,7 +294,6 @@
             border-radius: 10px;
         }
 
-        /* --- HERO BANNER --- */
         .hero-banner {
             background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
             border-radius: 20px;
@@ -330,7 +317,6 @@
             line-height: 1.5;
         }
 
-        /* --- GRIDS & PANELS --- */
         .grid-cards {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -408,7 +394,6 @@
             color: var(--secondary);
         }
 
-        /* --- STAT CARDS --- */
         .stat-card {
             background: rgba(255, 255, 255, 0.7);
             backdrop-filter: blur(10px);
@@ -461,7 +446,6 @@
             font-weight: bold;
         }
 
-        /* --- LISTS & ITEMS WITH IMAGES --- */
         .list-item {
             display: flex;
             align-items: center;
@@ -545,7 +529,6 @@
             transform: scale(1.05);
         }
 
-        /* Assignment Card */
         .assignment-card {
             background: var(--card-bg);
             border-radius: 20px;
@@ -615,7 +598,6 @@
             color: #d97706;
         }
 
-        /* --- CHART WRAPPERS --- */
         .chart-container {
             position: relative;
             width: 100%;
@@ -624,7 +606,6 @@
             flex-grow: 1;
         }
 
-        /* --- MOBILE MENU TOGGLE --- */
         .mobile-toggle {
             display: none;
             background: none;
@@ -635,7 +616,6 @@
             padding: 5px;
         }
 
-        /* --- MOBILE RESPONSIVENESS --- */
         @media (max-width: 1024px) {
 
             .grid-middle,
@@ -750,7 +730,6 @@
             }
         }
 
-        /* --- 3-SECOND PRELOADER CSS (ORANGE) --- */
         #preloader {
             position: fixed;
             top: 0;
@@ -826,11 +805,10 @@
         </div>
     </div>
 
-    <!-- SIDEBAR -->
     <nav class="sidebar" id="sidebar">
         <div class="nav-logo">
-                <img src="./asset/yellow_logo.webp" alt="logo" class="logo">
-            </div>
+            <img src="./asset/yellow_logo.webp" alt="logo" class="logo">
+        </div>
         <ul class="nav-menu">
             <li class="nav-item active" onclick="switchView('view-classes', this)">🏫 Class Management</li>
             <li class="nav-item" onclick="switchView('view-students', this)">👨‍🎓 Student Management</li>
@@ -843,15 +821,12 @@
         </div>
     </nav>
 
-    <!-- MAIN CONTENT -->
     <main class="main-content">
 
-        <!-- HEADER -->
         <header class="header">
             <div class="header-left">
                 <button class="mobile-toggle" id="menuToggle">☰</button>
                 <div class="welcome-msg">
-                    <!-- NEW: DASHBOARD BADGE ADDED HERE -->
                     <span class="dashboard-badge">👨‍🏫 Teacher Dashboard</span>
                     <h1 id="headerName">Hi, Teacher 👋</h1>
                     <p>Welcome back to your teaching dashboard</p>
@@ -863,9 +838,6 @@
             </div>
         </header>
 
-        <!-- ==========================================
-             VIEW 1: CLASS MANAGEMENT (Default)
-             ========================================== -->
         <div id="view-classes" class="view-section active">
             <div class="hero-banner animate-on-scroll">
                 <h1>Empower Students Through Better Teaching</h1>
@@ -910,23 +882,21 @@
                         <h2>📅 Today's Classes</h2>
                     </div>
                     <div class="list-item">
-                        <img src="https://images.unsplash.com/photo-1606326608606-aa0b62935f2b?q=80&w=150&auto=format&fit=crop"
-                            class="section-item-img" alt="Math">
+                        <img src="./asset/e6.webp" class="section-item-img" alt="Math">
                         <div class="list-details">
                             <h4>Advanced Mathematics</h4>
                             <p>10:00 AM - Room 402 | 35 Students</p>
                         </div>
-                        <button class="btn-primary">Start Live</button>
+                        <button class="btn-primary" onclick="window.location.href='404page.html'">Start Live</button>
                     </div>
                     <div class="list-item">
-                        <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?q=80&w=150&auto=format&fit=crop"
-                            class="section-item-img" alt="Physics">
+                        <img src="./asset/e7.webp" class="section-item-img" alt="Physics">
                         <div class="list-details">
                             <h4>Physics Intro</h4>
                             <p>1:30 PM - Lab 2 | 28 Students</p>
                         </div>
-                        <button class="btn-primary"
-                            style="background:#f1f5f9; color:var(--text-main);">Upcoming</button>
+                        <button class="btn-primary" style="background:#f1f5f9; color:var(--text-main);"
+                            onclick="window.location.href='404page.html'">Upcoming</button>
                     </div>
                 </div>
                 <div class="panel animate-on-scroll">
@@ -937,9 +907,7 @@
                 </div>
             </section>
 
-            <!-- NEW SECTIONS ADDED FOR CLASS MANAGEMENT -->
             <section class="grid-half">
-                <!-- Upcoming Exams -->
                 <div class="panel animate-on-scroll">
                     <div class="panel-header">
                         <h2>📝 Upcoming Examinations</h2>
@@ -962,10 +930,9 @@
                     </div>
                 </div>
 
-                <!-- Recent Materials -->
                 <div class="panel animate-on-scroll">
                     <div class="panel-header">
-                        <h2>📁 Recent Class Materials</h2><a href="#">Upload New</a>
+                        <h2>📁 Recent Class Materials</h2><a href="404page.html">Upload New</a>
                     </div>
                     <div class="list-item">
                         <div class="list-icon" style="background:#10b981; border-radius:10px; font-size:14px;">PDF</div>
@@ -973,7 +940,8 @@
                             <h4>Chapter 4: Calculus Notes</h4>
                             <p>Uploaded: 2 hours ago | 1.2 MB</p>
                         </div>
-                        <button class="btn-primary" style="background:#f1f5f9; color:var(--text-main);">View</button>
+                        <button class="btn-primary" style="background:#f1f5f9; color:var(--text-main);"
+                            onclick="window.location.href='404page.html'">View</button>
                     </div>
                     <div class="list-item">
                         <div class="list-icon" style="background:var(--primary); border-radius:10px; font-size:14px;">
@@ -982,15 +950,13 @@
                             <h4>Physics Lab Guidelines</h4>
                             <p>Uploaded: Yesterday | 800 KB</p>
                         </div>
-                        <button class="btn-primary" style="background:#f1f5f9; color:var(--text-main);">View</button>
+                        <button class="btn-primary" style="background:#f1f5f9; color:var(--text-main);"
+                            onclick="window.location.href='404page.html'">View</button>
                     </div>
                 </div>
             </section>
         </div>
 
-        <!-- ==========================================
-             VIEW 2: STUDENT MANAGEMENT
-             ========================================== -->
         <div id="view-students" class="view-section">
             <h2 style="margin-bottom: 20px; color: var(--primary);">Student Management</h2>
             <div class="grid-3">
@@ -1018,8 +984,7 @@
                         <h2>🧑‍🎓 Top Performers</h2>
                     </div>
                     <div class="list-item">
-                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=150&auto=format&fit=crop"
-                            class="section-item-img" style="border-radius:50%">
+                        <img src="./asset/c5.webp" class="section-item-img" style="border-radius:50%">
                         <div class="list-details">
                             <h4>Naveen Kumar</h4>
                             <p>Grade: A+ | Attendance: 98%</p>
@@ -1027,8 +992,7 @@
                         <span style="font-weight:bold; color:var(--success);">Top 1%</span>
                     </div>
                     <div class="list-item">
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=150&auto=format&fit=crop"
-                            class="section-item-img" style="border-radius:50%">
+                        <img src="./asset/b6.webp" class="section-item-img" style="border-radius:50%">
                         <div class="list-details">
                             <h4>Sarah Jenkins</h4>
                             <p>Grade: A | Attendance: 95%</p>
@@ -1045,17 +1009,13 @@
             </div>
         </div>
 
-        <!-- ==========================================
-             VIEW 3: ASSIGNMENT CENTER
-             ========================================== -->
         <div id="view-assignments" class="view-section">
             <h2 style="margin-bottom: 20px; color: var(--primary);">Assignment Center</h2>
 
             <div class="grid-3">
                 <div class="assignment-card animate-on-scroll">
-                    <div style="overflow: hidden;"><img
-                            src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?q=80&w=300&auto=format&fit=crop"
-                            class="assignment-img" alt="React Task"></div>
+                    <div style="overflow: hidden;"><img src="./asset/e5.webp" class="assignment-img" alt="React Task">
+                    </div>
                     <div class="assignment-content">
                         <div>
                             <h3 class="assignment-title">React Final Project</h3>
@@ -1063,15 +1023,14 @@
                         </div>
                         <div style="display: flex; justify-content: space-between; align-items: center;">
                             <span class="status-badge status-pending">15 Pending</span>
-                            <button class="btn-primary">Review</button>
+                            <button class="btn-primary" onclick="window.location.href='404page.html'">Review</button>
                         </div>
                     </div>
                 </div>
 
                 <div class="assignment-card animate-on-scroll" style="transition-delay: 0.1s;">
-                    <div style="overflow: hidden;"><img
-                            src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?q=80&w=300&auto=format&fit=crop"
-                            class="assignment-img" alt="Math Task"></div>
+                    <div style="overflow: hidden;"><img src="./asset/e6.webp" class="assignment-img" alt="Math Task">
+                    </div>
                     <div class="assignment-content">
                         <div>
                             <h3 class="assignment-title">Calculus Quiz 4</h3>
@@ -1079,16 +1038,15 @@
                         </div>
                         <div style="display: flex; justify-content: space-between; align-items: center;">
                             <span class="status-badge status-active">Active</span>
-                            <button class="btn-primary"
-                                style="background:#f1f5f9; color:var(--text-main);">Edit</button>
+                            <button class="btn-primary" style="background:#f1f5f9; color:var(--text-main);"
+                                onclick="window.location.href='404page.html'">Edit</button>
                         </div>
                     </div>
                 </div>
 
                 <div class="assignment-card animate-on-scroll" style="transition-delay: 0.2s;">
-                    <div style="overflow: hidden;"><img
-                            src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?q=80&w=300&auto=format&fit=crop"
-                            class="assignment-img" alt="Physics Lab"></div>
+                    <div style="overflow: hidden;"><img src="./asset/e7.webp" class="assignment-img" alt="Physics Lab">
+                    </div>
                     <div class="assignment-content">
                         <div>
                             <h3 class="assignment-title">Physics Lab Report</h3>
@@ -1096,8 +1054,8 @@
                         </div>
                         <div style="display: flex; justify-content: space-between; align-items: center;">
                             <span class="status-badge status-active">Draft</span>
-                            <button class="btn-primary"
-                                style="background:#f1f5f9; color:var(--text-main);">Publish</button>
+                            <button class="btn-primary" style="background:#f1f5f9; color:var(--text-main);"
+                                onclick="window.location.href='404page.html'">Publish</button>
                         </div>
                     </div>
                 </div>
@@ -1106,27 +1064,29 @@
             <div class="grid-middle">
                 <div class="panel animate-on-scroll">
                     <div class="panel-header">
-                        <h2>📝 Recent Submissions</h2> <button class="btn-primary">+ Create New</button>
+                        <h2>📝 Recent Submissions</h2> <button class="btn-primary"
+                            onclick="window.location.href='404page.html'">+ Create New</button>
                     </div>
 
                     <div class="list-item">
-                        <img src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?q=80&w=150&auto=format&fit=crop"
-                            class="section-item-img" style="border-radius:50%" alt="Student Alex">
+                        <img src="./asset/c6.webp" class="section-item-img" style="border-radius:50%"
+                            alt="Student Alex">
                         <div class="list-details">
                             <h4>Alex Johnson</h4>
                             <p>Submitted: React Final Project</p>
                         </div>
-                        <button class="btn-primary">Grade</button>
+                        <button class="btn-primary" onclick="window.location.href='404page.html'">Grade</button>
                     </div>
 
                     <div class="list-item">
-                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=150&auto=format&fit=crop"
-                            class="section-item-img" style="border-radius:50%" alt="Student Maria">
+                        <img src="./asset/b4.webp" class="section-item-img" style="border-radius:50%"
+                            alt="Student Maria">
                         <div class="list-details">
                             <h4>Maria Garcia</h4>
                             <p>Submitted: Calculus Quiz 4</p>
                         </div>
-                        <button class="btn-primary" style="background:#f1f5f9; color:var(--text-main);">View</button>
+                        <button class="btn-primary" style="background:#f1f5f9; color:var(--text-main);"
+                            onclick="window.location.href='404page.html'">View</button>
                     </div>
                 </div>
 
@@ -1139,9 +1099,6 @@
             </div>
         </div>
 
-        <!-- ==========================================
-             VIEW 4: TEACHING ANALYTICS 
-             ========================================== -->
         <div id="view-analytics" class="view-section">
             <h2 style="margin-bottom: 20px; color: var(--primary);">Teaching Analytics</h2>
             <div class="grid-3">
@@ -1170,7 +1127,7 @@
                         <h2>🗣️ Student Engagement</h2>
                     </div>
                     <div style="text-align: center; margin-bottom: 15px;">
-                        <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=400&auto=format&fit=crop"
+                        <img src="./asset/e9.webp"
                             style="width:100%; height:120px; object-fit:cover; border-radius:10px;"
                             alt="Engagement Banner">
                     </div>
@@ -1187,7 +1144,6 @@
 
     </main>
 
-    <!-- JAVASCRIPT -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             let userEmail = localStorage.getItem('userEmail') || "teacherjohn@gmail.com";
@@ -1311,21 +1267,18 @@
             });
         }
 
-        // --- PRELOADER LOGIC (3 SECONDS) ---
         window.addEventListener('load', () => {
             const preloader = document.getElementById('preloader');
 
-            // Page scroll aagakudathu nu block pandrom
             document.body.style.overflow = 'hidden';
 
             setTimeout(() => {
                 preloader.style.opacity = '0';
                 preloader.style.visibility = 'hidden';
 
-                // 3 Seconds appuram scroll allow pandrom
                 document.body.style.overflow = 'auto';
-                document.body.style.overflowX = 'hidden'; // Keeps horizontal scroll locked
-            }, 3000); // 3000ms = 3 Seconds
+                document.body.style.overflowX = 'hidden';
+            }, 1000);
         });
     </script>
 </body>

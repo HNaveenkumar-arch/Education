@@ -1,6 +1,3 @@
-/* ==========================================================================
-   1. BASE RESET & SYSTEM GLOBAL FONTS 
-   ========================================================================== */
 * {
   margin: 0;
   padding: 0;
@@ -14,7 +11,6 @@ body {
   overflow-x: hidden;
 }
 
-/* --- 3-SECOND PRELOADER CSS --- */
 #preloader {
   position: fixed;
   top: 0;
@@ -72,7 +68,6 @@ body {
   }
 }
 
-/* --- SCROLL ANIMATION CSS --- */
 .fade-up {
   opacity: 0;
   transform: translateY(40px);
@@ -85,9 +80,6 @@ body {
   transform: translateY(0);
 }
 
-/* ==========================================================================
-   2. FIXED TRANSPARENT NAVBAR 
-   ========================================================================== */
 .navbar {
   position: fixed;
   top: 0;
@@ -111,27 +103,24 @@ body {
   align-items: center;
 }
 
-/* --- Logo Section --- */
-/* ==========================================================================
-   NAVBAR LOGO STYLING
-   ========================================================================== */
 .nav-logo {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
 }
 
 .nav-logo .logo {
-    height: 45px; /* Unga image size-ku etha mathiri mathikonga */
-    width: auto;
-    transition: transform 0.3s ease, filter 0.3s ease;
-    /* Yellow logo-ku oru light gold drop shadow */
-    filter: drop-shadow(0 2px 5px rgba(251, 191, 36, 0.3)); 
+  height: 40px;
+  width: auto;
+  transition:
+    transform 0.3s ease,
+    filter 0.3s ease;
+  filter: drop-shadow(0 2px 5px rgba(251, 191, 36, 0.3));
 }
 
 .nav-logo:hover .logo {
-    transform: scale(1.05); /* Light-ah zoom aagum */
-    filter: drop-shadow(0 4px 10px rgba(251, 191, 36, 0.6)); /* Glow athigamagum */
+  transform: scale(1.05);
+  filter: drop-shadow(0 4px 10px rgba(251, 191, 36, 0.6));
 }
 .logo-icon {
   color: #fbbf24;
@@ -143,7 +132,6 @@ body {
   letter-spacing: -0.5px;
 }
 
-/* --- Center Desktop Menu Links --- */
 .nav-menu {
   display: flex;
   list-style: none;
@@ -176,7 +164,6 @@ body {
   transform: scale(1.2);
 }
 
-/* --- Right Side Action Buttons --- */
 .nav-actions {
   display: flex;
   align-items: center;
@@ -218,9 +205,6 @@ body {
   box-shadow: 0 6px 20px rgba(251, 191, 36, 0.5);
 }
 
-/* ==========================================================================
-   3. MOBILE RESPONSIVE HAMBURGER ICON 
-   ========================================================================== */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -248,9 +232,6 @@ body {
   transform: translateY(-8.5px) rotate(-45deg);
 }
 
-/* ==========================================================================
-   4. MOBILE DROPDOWN DRAWERS 
-   ========================================================================== */
 .mobile-dropdown {
   display: none;
   background-color: #4c1d95;
@@ -339,9 +320,6 @@ body {
   font-size: 16px;
 }
 
-/* ==========================================================================
-   6. RESPONSIVE CONTROLS
-   ========================================================================== */
 @media (max-width: 992px) {
   .nav-container {
     padding: 0 24px;
@@ -465,10 +443,9 @@ body.no-scroll {
 
 .links-col ul li a:hover {
   color: #fbbf24;
-  padding-left: 5px; /* Slight slide effect */
+  padding-left: 5px;
 }
 
-/* 3. Support Info (With Hover Animation) */
 .support-col ul {
   list-style: none;
   padding: 0;
@@ -488,7 +465,7 @@ body.no-scroll {
 
 .support-col ul li:hover {
   color: #fbbf24;
-  transform: translateX(6px); /* Moves right */
+  transform: translateX(6px);
 }
 
 .support-col ul li i {
@@ -498,10 +475,9 @@ body.no-scroll {
 }
 
 .support-col ul li:hover i {
-  transform: scale(1.2); /* Icon grows slightly */
+  transform: scale(1.2);
 }
 
-/* 4. Newsletter */
 .newsletter-col p {
   font-size: 15px;
   margin-bottom: 20px;
@@ -525,7 +501,7 @@ body.no-scroll {
 }
 
 .newsletter-input-wrap:focus-within {
-  border-color: rgba(251, 191, 36, 0.5); /* Gold glow */
+  border-color: rgba(251, 191, 36, 0.5);
 }
 
 .newsletter-input-wrap input {
@@ -557,7 +533,6 @@ body.no-scroll {
   background: #f59e0b;
 }
 
-/* Form Validation Message CSS */
 .form-msg {
   font-size: 13px;
   font-weight: 600;
@@ -580,9 +555,6 @@ body.no-scroll {
   }
 }
 
-/* =====================
-   FOOTER BOTTOM
-   ===================== */
 .footer-bottom {
   display: flex;
   justify-content: space-between;
@@ -602,9 +574,6 @@ body.no-scroll {
   color: #fbbf24;
 }
 
-/* ==========================================================================
-   RESPONSIVE LAYOUT FOR FOOTER
-   ========================================================================== */
 @media (max-width: 992px) {
   .footer-grid {
     grid-template-columns: repeat(2, 1fr);
