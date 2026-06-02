@@ -558,6 +558,52 @@
             }
         }, 1000);
     </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+    const searchInput = document.querySelector(".course-search-input");
+    const searchBtn = document.querySelector(".course-search-btn");
+    const searchWrapper = document.querySelector(".course-search-wrapper"); 
+
+    searchBtn.removeAttribute("onclick");
+
+    const errorMsg = document.createElement("div");
+    errorMsg.innerText = "Please enter a course name to search.";
+    errorMsg.style.color = "#ff4d4d"; 
+    errorMsg.style.fontSize = "14px";
+    errorMsg.style.marginTop = "12px";
+    errorMsg.style.display = "none";
+    errorMsg.style.textAlign = "center"; 
+    errorMsg.style.width = "100%";
+    errorMsg.style.fontWeight = "600";
+    
+    searchWrapper.insertAdjacentElement("afterend", errorMsg);
+
+    searchBtn.addEventListener("click", function(e) {
+        e.preventDefault(); 
+
+        if (searchInput.value.trim() === "") {
+
+            errorMsg.style.display = "block";
+            searchWrapper.style.borderColor = "#ff4d4d";
+            searchWrapper.style.borderWidth = "2px";
+        } else {
+
+            errorMsg.style.display = "none";
+            searchWrapper.style.borderColor = "rgba(255, 215, 0, 0.3)"; 
+            searchWrapper.style.borderWidth = "1px";
+            window.location.href = "404page.html";
+        }
+    });
+
+    searchInput.addEventListener("input", function() {
+        if (searchInput.value.trim() !== "") {
+            errorMsg.style.display = "none";
+            searchWrapper.style.borderColor = "rgba(255, 215, 0, 0.3)"; 
+            searchWrapper.style.borderWidth = "1px";
+        }
+    });
+});
+    </script>
 
 </body>
 
