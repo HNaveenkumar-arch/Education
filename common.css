@@ -233,11 +233,18 @@ body {
 }
 
 .mobile-dropdown {
-  display: none;
-  background-color: #4c1d95;
-  border-top: 1px solid rgba(251, 191, 36, 0.2);
-  padding: 20px 24px;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    max-height: calc(100vh - 80px);
+    overflow-y: auto;
+    background-color: #4c1d95;
+    border-top: 1px solid rgba(251, 191, 36, 0.2);
+    padding: 20px 24px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+    z-index: 999;
 }
 .mobile-dropdown.show {
   display: block;
