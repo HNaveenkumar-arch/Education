@@ -468,11 +468,11 @@
     </section>
 
     <footer class="footer-section">
-        <div class="footer-container fade-up">
+        <div class="footer-container">
 
             <div class="footer-grid">
 
-                <div class="footer-col brand-col">
+                <div class="footer-col brand-col" data-aos="fade-up" data-aos-delay="300">
                     <div class="nav-logo">
                         <a href="index.html">
                             <img src="./asset/yellow_logo.webp" alt="logo" class="logo">
@@ -487,28 +487,33 @@
                     </div>
                 </div>
 
-                <div class="footer-col links-col">
+                <div class="footer-col links-col" data-aos="fade-up" data-aos-delay="400">
                     <h3>Platform</h3>
                     <ul>
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="course.html">course</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="404page.html">About</a></li>
+                        <li><a href="404page.html">Service</a></li>
+                        <li><a href="404page.html">Blog</a></li>
+                        <li><a href="404page.html">Contact</a></li>
                     </ul>
                 </div>
 
-                <div class="footer-col support-col">
+                <div class="footer-col support-col" data-aos="fade-up" data-aos-delay="600">
                     <h3>Support</h3>
                     <ul>
                         <li class="support-item"><i class="far fa-envelope"></i> support@edusmart.learning</li>
                         <li class="support-item"><i class="fas fa-map-marker-alt"></i> Salem City, Tamil Nadu</li>
+                        <li class="support-item"><i class="fas fa-phone-alt"></i> +91 98765 43210</li>
+                        <li class="support-item"><i class="far fa-clock"></i> Mon - Fri: 9 AM - 6 PM</li>
+                        <li class="support-item"><i class="fas fa-globe"></i> www.stackly.learning</li>
                     </ul>
                 </div>
 
-                <div class="footer-col newsletter-col">
+
+                <div class="footer-col newsletter-col" data-aos="fade-up" data-aos-delay="800">
                     <h3>Newsletter</h3>
-                    <p>Get exclusive course drops & tournament alerts.</p>
+                    <p>By joining our community, you will be the first to get exclusive access to our latest course
+                        drops, ensuring you always stay ahead of the curve..</p>
                     <form class="newsletter-form" id="newsletter-form" novalidate>
                         <div class="newsletter-input-wrap">
                             <input type="email" id="newsletter-email" placeholder="Enter student email">
@@ -516,14 +521,35 @@
                         </div>
                         <span id="email-msg" class="form-msg"></span>
                     </form>
+                    <div class="moving-update-box">
+                        <div class="moving-track">
+                            <span>🔥 Unlock premium course drops before anyone else</span>
+                            <span class="dot">•</span>
+                            <span>🏆 Get real-time alerts for high-stakes tournaments</span>
+                            <span class="dot">•</span>
+                            <span>⚡ Join a community of top-tier learners & gamers</span>
+                            <span class="dot">•</span>
+                            <span>🔥 Unlock premium course drops before anyone else</span>
+                            <span class="dot">•</span>
+                            <span>🏆 Get real-time alerts for high-stakes tournaments</span>
+                            <span class="dot">•</span>
+                            <span>⚡ Join a community of top-tier learners & gamers</span>
+                        </div>
+                    </div>
                 </div>
 
             </div>
 
-            <div class="footer-bottom">
+            <div class="footer-bottom" data-aos="fade-up" data-aos-delay="200">
                 <p>&copy; 2026 EduSmart Learning. All rights reserved.</p>
                 <div class="footer-legal">
-                    <a href="404page.html">Terms & Conditions</a> | <a href="404page.html">Privacy Policy</a>
+                    <a href="404page.html">Terms & Conditions</a>
+                    <span class="separator">|</span>
+                    <a href="404page.html">Privacy Policy</a>
+                    <span class="separator">|</span>
+                    <a href="404page.html">Cookie Policy</a>
+                    <span class="separator">|</span>
+                    <a href="404page.html">Refund Policy</a>
                 </div>
             </div>
 
@@ -559,50 +585,50 @@
         }, 1000);
     </script>
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-    const searchInput = document.querySelector(".course-search-input");
-    const searchBtn = document.querySelector(".course-search-btn");
-    const searchWrapper = document.querySelector(".course-search-wrapper"); 
+        document.addEventListener("DOMContentLoaded", function () {
+            const searchInput = document.querySelector(".course-search-input");
+            const searchBtn = document.querySelector(".course-search-btn");
+            const searchWrapper = document.querySelector(".course-search-wrapper");
 
-    searchBtn.removeAttribute("onclick");
+            searchBtn.removeAttribute("onclick");
 
-    const errorMsg = document.createElement("div");
-    errorMsg.innerText = "Please enter a course name to search.";
-    errorMsg.style.color = "#ff4d4d"; 
-    errorMsg.style.fontSize = "14px";
-    errorMsg.style.marginTop = "12px";
-    errorMsg.style.display = "none";
-    errorMsg.style.textAlign = "center"; 
-    errorMsg.style.width = "100%";
-    errorMsg.style.fontWeight = "600";
-    
-    searchWrapper.insertAdjacentElement("afterend", errorMsg);
-
-    searchBtn.addEventListener("click", function(e) {
-        e.preventDefault(); 
-
-        if (searchInput.value.trim() === "") {
-
-            errorMsg.style.display = "block";
-            searchWrapper.style.borderColor = "#ff4d4d";
-            searchWrapper.style.borderWidth = "2px";
-        } else {
-
+            const errorMsg = document.createElement("div");
+            errorMsg.innerText = "Please enter a course name to search.";
+            errorMsg.style.color = "#ff4d4d";
+            errorMsg.style.fontSize = "14px";
+            errorMsg.style.marginTop = "12px";
             errorMsg.style.display = "none";
-            searchWrapper.style.borderColor = "rgba(255, 215, 0, 0.3)"; 
-            searchWrapper.style.borderWidth = "1px";
-            window.location.href = "404page.html";
-        }
-    });
+            errorMsg.style.textAlign = "center";
+            errorMsg.style.width = "100%";
+            errorMsg.style.fontWeight = "600";
 
-    searchInput.addEventListener("input", function() {
-        if (searchInput.value.trim() !== "") {
-            errorMsg.style.display = "none";
-            searchWrapper.style.borderColor = "rgba(255, 215, 0, 0.3)"; 
-            searchWrapper.style.borderWidth = "1px";
-        }
-    });
-});
+            searchWrapper.insertAdjacentElement("afterend", errorMsg);
+
+            searchBtn.addEventListener("click", function (e) {
+                e.preventDefault();
+
+                if (searchInput.value.trim() === "") {
+
+                    errorMsg.style.display = "block";
+                    searchWrapper.style.borderColor = "#ff4d4d";
+                    searchWrapper.style.borderWidth = "2px";
+                } else {
+
+                    errorMsg.style.display = "none";
+                    searchWrapper.style.borderColor = "rgba(255, 215, 0, 0.3)";
+                    searchWrapper.style.borderWidth = "1px";
+                    window.location.href = "404page.html";
+                }
+            });
+
+            searchInput.addEventListener("input", function () {
+                if (searchInput.value.trim() !== "") {
+                    errorMsg.style.display = "none";
+                    searchWrapper.style.borderColor = "rgba(255, 215, 0, 0.3)";
+                    searchWrapper.style.borderWidth = "1px";
+                }
+            });
+        });
     </script>
 
 </body>
