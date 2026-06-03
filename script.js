@@ -264,3 +264,19 @@ images.forEach(img => {
         img.setAttribute('alt', cleanAltText);
     }
 });
+
+
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 768) {
+        const mobileMenu = document.getElementById('mobile-menu');
+        const hamburgerBtn = document.getElementById('hamburger-btn');
+        
+        if (mobileMenu && mobileMenu.classList.contains('show')) {
+            mobileMenu.classList.remove('show');
+            if (hamburgerBtn) {
+                hamburgerBtn.classList.remove('open');
+            }
+            document.body.classList.remove('no-scroll');
+        }
+    }
+});
