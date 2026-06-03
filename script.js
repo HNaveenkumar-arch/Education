@@ -255,28 +255,15 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-const images = document.querySelectorAll('img');
+document.addEventListener('DOMContentLoaded', () => {
+    const allSiteImages = document.querySelectorAll('img');
 
-images.forEach(img => {
-    if (!img.hasAttribute('alt') || img.getAttribute('alt').trim() === '') {
-        const fileName = img.src.substring(img.src.lastIndexOf('/') + 1).split('.')[0];
-        const cleanAltText = fileName.replace(/[-_]/g, ' ') || 'Website Image';
-        img.setAttribute('alt', cleanAltText);
-    }
-});
-
-
-window.addEventListener('resize', () => {
-    if (window.innerWidth > 768) {
-        const mobileMenu = document.getElementById('mobile-menu');
-        const hamburgerBtn = document.getElementById('hamburger-btn');
-        
-        if (mobileMenu && mobileMenu.classList.contains('show')) {
-            mobileMenu.classList.remove('show');
-            if (hamburgerBtn) {
-                hamburgerBtn.classList.remove('open');
-            }
-            document.body.classList.remove('no-scroll');
+    allSiteImages.forEach(img => {
+        if (!img.hasAttribute('alt') || img.getAttribute('alt').trim() === '') {
+            const fileName = img.src.substring(img.src.lastIndexOf('/') + 1).split('.')[0];
+            const cleanAltText = fileName.replace(/[-_]/g, ' ') || 'Website Image';
+            img.setAttribute('alt', cleanAltText);
         }
-    }
+    });
 });
+
