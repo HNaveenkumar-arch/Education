@@ -254,3 +254,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+const images = document.querySelectorAll('img');
+
+images.forEach(img => {
+    if (!img.hasAttribute('alt') || img.getAttribute('alt').trim() === '') {
+        const fileName = img.src.substring(img.src.lastIndexOf('/') + 1).split('.')[0];
+        const cleanAltText = fileName.replace(/[-_]/g, ' ') || 'Website Image';
+        img.setAttribute('alt', cleanAltText);
+    }
+});

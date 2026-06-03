@@ -241,7 +241,7 @@ body {
 }
 .mobile-dropdown.show {
   display: block;
-  animation: slideDown 0.3s ease forwards;
+  animation: slideDown 1s ease forwards;
 }
 @keyframes slideDown {
   from {
@@ -358,6 +358,7 @@ body.no-scroll {
   padding: 80px 24px 30px;
   color: #ffffff;
   border-top: 1px solid rgba(251, 191, 36, 0.1);
+  font-size: 20px;
 }
 
 .footer-container {
@@ -370,6 +371,13 @@ body.no-scroll {
   grid-template-columns: 2fr 1fr 1.2fr 1.8fr;
   gap: 40px;
   margin-bottom: 60px;
+  align-items: start;
+}
+
+.footer-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 .footer-logo {
@@ -387,7 +395,7 @@ body.no-scroll {
   font-size: 15px;
   line-height: 1.7;
   margin-bottom: 25px;
-  color: #cbd5e1;
+  color: #ffffff;
   max-width: 300px;
 }
 
@@ -484,7 +492,7 @@ body.no-scroll {
 .newsletter-col p {
   font-size: 15px;
   margin-bottom: 20px;
-  color: #cbd5e1;
+  color: #ffffff;
 }
 
 .newsletter-form {
@@ -570,7 +578,7 @@ body.no-scroll {
 }
 
 .footer-bottom p {
-  color: #94a3b8; 
+  color: #ffffff; 
   margin: 0;
 }
 
